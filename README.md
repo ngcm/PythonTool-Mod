@@ -1,2 +1,2 @@
 # PyCraft-Mod
-PyCraft Mod for Minecraft: interact with Minecraft using Python. Live!
+PyCraft Mod for Minecraft: an interactive way to interact with Minecraft using Python. Live!
