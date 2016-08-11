@@ -1,0 +1,6 @@
+tile.computerBlock.name=Computer Block
+container.computerBlock.name=Python Script Manager
+item.scriptItem.0.name=Python Script
+item.scriptItem.1.name=Housing Python Script
+item.scriptItem.2.name=Other Python Script
+tile.mbe02_block_partial.name=MBE02 Block Partial

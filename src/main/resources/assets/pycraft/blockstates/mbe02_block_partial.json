@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "pycraft:mbe02_block_partial_model" }
+    }
+}
