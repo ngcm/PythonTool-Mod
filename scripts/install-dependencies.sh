@@ -1,6 +1,8 @@
 #! /bin/bash
 
+echo ---------------------------------
 echo ----- STARTING INSTALLATION -----
+echo ---------------------------------
 
 # Download Forge 1.8 from the internet
 curl -o scripts/forge-18.zip http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-mdk.zip
@@ -21,7 +23,6 @@ mv gradlew forge-18/
 mv gradlew.bat forge-18/
 mv src forge-18/src/
 
-# Build
-cd forge-18
-chmod +x gradlew
-./gradlew build
+echo ---------------------------------
+echo ----- FINISHED INSTALLATION -----
+echo ---------------------------------
