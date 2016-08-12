@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "pycraft:items/scriptItem_1"
+        "layer0": "pycraft:items/scriptItem_3"
     },
     "display": {
         "thirdperson": {
