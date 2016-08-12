@@ -3,7 +3,7 @@ jdk:
 - oraclejdk7
 - openjdk6
 install:
-- scripts/install-dependencies.sh
+- ./scripts/install-dependencies.sh
 script:
-- scripts/build.sh
+- ./scripts/build.sh
 
