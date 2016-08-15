@@ -12,22 +12,6 @@ script:
 - chmod +x scripts/build.sh
 - "./scripts/build.sh"
 after_success:
-- echo ------------------------------
-- echo ------------------------------
-- ls -all
-- cd forge-18/
-- ls -all
-- cd build/
-- ls -all
-- cd libs/
-- ls -all
-- echo ------------------------------
-- echo ------------------------------
+- DEPLOY_PASS=lolol
 - export SSHPASS=$DEPLOY_PASS
 - sshpass -e scp README.md DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-env:
-  global:
-  - secure: CAfxSfQIyKgUDVz8wGe0Pxmfb/775sTWOkBtQSe2v2LI+NTVmOwWHnMrTU3LdPR9Dlnm1GUPxwyoS75JDQbKakRFdd2IVyJDi7TgV10ncNVV63y/HmYtwSSrkbfV8NRwXdU3hhKMEqbLmtm8vNynNpKGetCjGKyVV1ojMcZqB7LGO0gBxUALa6p+eMB2QByDxGepPE5IgpsxkKYGhHybselkehsIw+EFS6cpYxqvEZiK27s8Zlu5ZovR7WCw04r2aewVKIikY2PRgMfHQHMXr+rZi8Wf8H4SuhnLcwr99nMUbxaK9dEdHh/B3ZOpVVUJqHx4fUd/MYJY9+rjFPz4ekPgqPzTtq+9gA//0Vs3zsxNWBZqgeJ/8ehWEBtDdLQowtsDkBgL6G/zsypk0ydq2lnGaySYSw+qc8/2do67nZg0uAf40uEJd9w3qrXSBzniWuL/AMBKJ+FQBwX/yQRBBRk0iH8UON/tOBfGOkX0zelKysa8fcI/biNR7QekRdtf7KoNEJSRCuQ+rPCmD89YUAWbCF4dkb8NuSFF8UlgJOBdX1PtMDegfJ3Ml5qRCH+tcr+njqj2lfX0ZA60+fRVTrgSf4gNKfdwypUkrmWIejoOHqQ1ln5ukc0XS1ix2EVxAclKjbU2C/ZwGsBz1UCaUfmAjoRcvI5Xyi4iFdkIuK8=
-  - secure: NVuAt5GvPe9MYbHcMoL/QKoe7TppLMQIcPDdm1pbACxOcm7E7R2Rh9dWwRUbbALwnrpZg+jAOvMIXqYZT1Tx8kYYidO2QRnXE1vkqh3ao236QD+Fc2LpWpSeQK3IvsU2tAES0RlgReyPP58GmeLv1QJER2pfU78y0XdzPhpgv17MIOtqGbBL/DLOc1tNliQj20R6kybJoWK19hTcVWBj2MhzURDhTD9CUI+i4UfSTti87F54ny4p8psOATCkhN9J96KpIsRiiEmQA3sBbnPn+U8XDLZQlKNQulH2NM6Eu/xTHgMnrDTLg19yPUXdFHaoLWRmBDK2zDfN8kE1bAp+iD0f47miZHvhQZgdbrO8/uhPaOiN/1JcjeLiQa+/fwhPwJ8Z24xO1InI2bRVKyTx/t1icxcdjg861hsC3YNKDGhDiVJd+GTRtY54HuilecbkhkZl3QXR3Q/8tvMQ4KEsPeknHmCQZkmjIz/S8L4wAEB3ntzQ9TBebq2qqkFk7EvL5VcIcrDhGspxn/gitWPmS23Adl+Ll15NUPiVs9tfYnsli423fwAR7g/kY0X5uF4ggalqvwov0yKloxFa5EGcub593VCY1sQazK0UGgQIE/eAidLA0MdT3VYXD6MkzLvFVj5clnzx08OZOw/oK1TH7Hs7htGmLD2Y50gITrgW2eA=
-  - secure: BL1Jl9OCgFLjYhY5vvwJNQHHjYIkIzZKSRrd5GX8CCyV87qqxh5M0QEtauUyPwSwimHKkWDBXxUmjyNY2/SnFsat3so4LR6kWSP5fXftcAJ0h2GFTP0nGZ0lxxmEYAB66bRhwc0QfVKDb/0Ijw0bgkTOxrpIg8NcFw6K7piiN4etJlMBBIii/urXAuWyp74XEE1WPMnGvgskO9tkjS67NxoYwRL5LoaFs6b2VoDiD7OVxoPfVl+qLN/8KoF4x0F6u+gJbVqJcNJXSKVetbZaECYFwNYeuoZINBXTQR1WDzCz9jA6rCFyj9EIxsmOcyyN3nJqlguN3T3NIzYf/O3yYX26oauG8mzHF1+Qwcrqk0UhUrRs3GiiuGq+mDtyGT5u32NRqsAazUNGnVY2V6rIi8nFC7AsN9n4j2hc/HXESd9pDrt/syJeUV0bqMF2afxc904uR7aFMbNFZqs9lozsbftzd4CWJ+diq0lQgWNfCdvnMLA3lwCRTafUlD7bkmXBCiTiJCU0Cah+rqpE1su/mGK7WuQsdaceRgm4FGbkjDY0snA+c+xaU9WF6s9WTCZ222H5SY/m6dFUlWcYVQ65uz/jxigjKrXpneJqZAUNP3Vt20c2u9iuRaOq6CkRbj2zPZZhmE/Q8sVBl+RZyN1e8RfDvBSFuIJZyOVrr3FKNtA=
-  - secure: NwbqW+kkR836HDWDvCzD6p5pWqDac2BXmFjQFZTD4gB0b661HZT0V+buZ5SSgta9F5Iazq16mCVysgtVuaytyx++QbX0UGHgwUl3MocHwKvPU1Ri779Iet+VQ/QiHzxFvN0BtBNnIcHJ4/RgALCA7WkDcJT2ttVAFbqsrmYwmpk+p9ML+4P8UBrqaNgVAlb9gOTk+H6uxmjgBU9AY09MEqQchd0H0SHvirSNvverBj/w3SV9A/+kUW3c+smyb6IPlkLUKZ2LlsBq1pEX3QS3byRAsfAYTi1MngQMjSnVzBwGoobHzcy4vrCc/o7QLM0ZpJYgBnjLH+1Sob9MCrhiNRiKiflYSnWRZDN+p1bZy+YcwMSYd79A3occVL4jBS1Xt2d2ItTKfE8y9zrPQcp65ugs7UEF+rsv02IQi7UeURCxS/6hYq/ODVWTuCxFgivTN4MBCWot3Btum9go0mBPG4k29vq1otIsx7kkJ4qola41ErzjmyLEEq3LdHnn+IPfiz5Mgim4s0WNmuPds3IRN2z3GR8M5pz/p9peDqwGjMoog8zqjr3wIQ9xuSsq78GKASVVxw8ARrMqm75TyEZQafP4BVm7vKiV7HDYharOCXi9HE1+Wvyr29v849H8M13dBoZZSVrSWuicV/5g3ra/9I9c+mRB/1GG+nGE16JBuYY=
