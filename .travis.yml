@@ -19,5 +19,10 @@ env:
   - secure: mFmRAMY4ZdupA/Ef4Shc1MKgQP0MePxjmeyNPm4MpGqh19FecuOlWIeXZLawl1UqShKvuuv1kN63vyXdY4hibHvqKmhkp6NV9sD8TFsg4MwAQBmiYyb/n2grTRCONBPchhc2D+4qwUhghiuhzgbXxBY8zfClopF9VByq5mGS+W0R6ZyaRPXDxvMjAw90l4YSQ1mErvLr6+tMiVSTrZQCveYlTD6vnsQ5m5mqZjEmtZG+NAdIjzHL5VXT9TFmQEdsx8AoMgMD/UNT/1XMbIuW83umNT6uXA0VbRRWqbtB/hgbhaxV988uM+qYho1l57KARo0C/cKx1G3qL1AXXpmoZYHoPGuSm1e9gNk/L4xmmBxxHXbtZp4J72TX3+6zLKJc3+2ApoGvTplsd3C2wtv9qVCknLAAn8x4kfqZW3kYgkl996mXSvOfnhQ4iTQG+v7GOckSFHfsc9n8c+0p6y4yFL6Q9aKUlJeiCbNbUOBzK3HUcmHFqaAbmXrm9359QhNNYCHCAWDDdvt6maSrcWTQ6a+YRa47xVYB+IyItP4tJ1UyDmC9HvpapiFuXrC/FW4naPbLk1a3JwjcDVTI/i4SLuox6DiZr3L6PfpLhDLNhg6oyuTR6EwGQTB06WcE/7TZEF7Lte8/lGf5YD6k+lvKV5VYapJDE69xvhNSaBAZKm4=
   - secure: PTPv+5mUTomvPWNg41SNuFhzpWyki4yqvCzyyBYP9+PGV0QljVPiLuMDMv38OwH0vxhexQPcMJ9Aw2kPdj/k3S+y2DaP2Ecje+kfYZT/BM++k2uwWmKHL5w587fskBikdcyQkWzjR9qgrxSfEvtQdJK53novSSMpsOxeVMnjo28T2Y39yuGcdj9kd8Kxqiq8cMnrOp/LtDlywgQrYoXHQ3bKUn0vKxjZ3m03ghPtRO7t9SzqkdX2+RqEEheQj/ekbuGixwiCxRD3suFSkgNjau/BhgkQkbl0orvcg9TkBdWm6YnVTjMiTmE8gTayQ4IKo/62kM0s2UZObC4pcJG2RwT7samDCGr0/zOprrg9ROO7yg7ApryWw2xzb6UromJXFojsQP1MX8xUxQ3p6q7GdR21AaVQ5kqWTI1HEj+WRf/y3+kGY/yv8lo7nxJz8BkFrIZKSAIz1ychIjrugZ7fY9RWDMkj5ZnbTgQlvunQEx8ULjDOVeWIPX54F3JA2Mj0B8GwBdd8GW2BLElIV1MiNErXmyuwqBoTrLYia3L7bQ+UzZrDeJOw8bnEmJD/D1cI67XRXHfeLK2x+5ABh62yrdfc6kb1Poa+1fkiUf6CQmVmCxZxtyNQ+fGDpIHRRR4ygzY3bKmpVBypx+ZJKIzkQtECud7YhBIRNrrkoPdjOMc=
 after_success:
+    - echo ------------------------------
+    - echo ------------------------------
+    - ls -all
+    - echo ------------------------------
+    - echo ------------------------------
     - export SSHPASS=$DEPLOY_PASS
     - sshpass -e scp build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
