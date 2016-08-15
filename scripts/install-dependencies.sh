@@ -5,11 +5,10 @@ echo ----- STARTING INSTALLATION -----
 echo ---------------------------------
 
 # Download Forge 1.8 from the internet
-curl -o scripts/forge-18.zip http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-mdk.zip
+curl -o forge-18.zip http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-mdk.zip
 
 # Create a directory to host Forge files and decompress the .zip file there
-mkdir forge-18
-tar -xvf scripts/forge-18.zip -C forge-18/
+unzip forge-18.zip -d forge-18
 
 # Setup workspace, may take a while
 cd forge-18

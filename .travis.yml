@@ -4,7 +4,8 @@ jdk:
 addons:
   apt:
     packages:
-    - sshpass
+      - sshpass
+      - unzip
 install:
 - chmod +x scripts/install-dependencies.sh
 - "./scripts/install-dependencies.sh"
