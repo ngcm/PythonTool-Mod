@@ -13,8 +13,7 @@ script:
 - chmod +x scripts/build.sh
 - "./scripts/build.sh"
 after_success:
-- DEPLOY_PAASS=lolol
-- export SSHPASS=$DEPLOY_PAASS
+- export SSHPASS=$DEPLOY_PASS
 - sshpass -e scp README.md DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
 env:
   global:
