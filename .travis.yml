@@ -25,4 +25,4 @@ after_success:
     - echo ------------------------------
     - echo ------------------------------
     - export SSHPASS=$DEPLOY_PASS
-    - sshpass -e scp build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+    - sshpass -e scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
