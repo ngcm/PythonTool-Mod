@@ -24,6 +24,10 @@ after_success:
     - ls -all
     - cd forge-18/
     - ls -all
+    - cd forge-18/build/
+    - ls -all
+    - cd forge-18/build/libs/
+    - ls -all
     - echo ------------------------------
     - echo ------------------------------
     - export SSHPASS=$DEPLOY_PASS
