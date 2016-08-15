@@ -3,9 +3,9 @@ jdk:
 - oraclejdk7
 - openjdk6
 addons:
-    apt:
-        packages:
-            - sshpass
+  apt:
+    packages:
+    - sshpass
 install:
 - chmod +x scripts/install-dependencies.sh
 - "./scripts/install-dependencies.sh"
@@ -15,20 +15,20 @@ script:
 env:
   global:
   - secure: ac+gwOEO93naKD3MsNK6IufYrfK8OtZhuF783arL3RIpWSI+HBAdJgmR2ntIMj707CvlM50dv6d8NSmh48MUpO5UsTqCCzoaLdzHmr0c2GYtz7yPUBDIXvuTu1lNcOrXgrilF/Xh6TBV3B09gT4KuwKKw5yM3do5r0NzcX4aARxa0gAN0zkMblrdWVsIYERpSFCxvwyN7srjSpZdFRYo/rYkBbF403l8LExAsvIksQRGlxLTx0lFjIRhqLOvX/Pf3KddobsUY6EOcieJ5fn3stYnhrhmuAJ0TgZpXhMOBS7u2xhSJJSae2frNTmOSazcZLnVoPVB/WtSkJaPgW21RZG7EdtRwrEb2fjLfiOJ23vqgbgKFZ9VmSjN1hqLlW3aQY4+GTlU1X+hBa+KLJdNCxcAhfsoNFy9z0vHWvDV4HMZ7QBKIQsl9pxunRR0TruyTyAEtr3lcUvkGEgpehE/uybisdjkalhJNa47EBCGKSXoSJn7ozFtNzfm1tDhiOs6xQOyGGE+y5o6R0Rbop8+HWlX8j74TqKhF5uXeT1N64xkkHzpDonuiRugcYek26X+WB+KMCd96eOkrf25jFQFt3gA62XoTcmHYMTMPv3XW+RHxeVx2bYslOE0IpD7GEuElmjdAv/oJrex4ZgJmgIkNS2pWS2IMWvbhmVX9okG+WU=
-  - secure: OJr/jJNHUMjVEmI5dAXJm6+s1DbqAooJQ0FG2Ql+b4NARhCRNQ5PIfovaWfxO12mT63eteNo+wxqulsb7/vcov3UuYgkdr67/WAr4GzGE0b+ZHtAevqGyO+T/1VJ3kT1Y7Co1K08YpsFhHPkIU1acfioC7m4YcepzNrd+mjoRVGkSSieXTX9Q3j0yqPZx3LlordFIsK0OzfM+2h0WmZgILOzM0fX6JGSvoLrGLa2NLTJWp3LUnfSVN5wNnmZZNWFaAb7XWxKKfEXjYGwRR7n9+yuvu07qn2xOoAbFqPHzoWypUGavKEBhwG+/tTsjgTX5O0IP8eGx0UNwIApBVXIhAd49eJVJ1ukENkN9iAsVuXWpDlIHS0m2A8G0LvOYpvPQpIuUhsLNw6/0m8DeSBLoNq6Gzo7dqQTYJ6ZhHAkAGT78kExno7zpuvtcJppCGqLlqILkcExFUA9A3mctf/oWgfvMe6IFfnxBH+//pWBoLy0sPmTtxNOoXpvblSfeogTwDwuAjIzs5gQoixpg3UiRlEDGq9vi8B6XwIk2zrlf7qSzJfYD/5RUSUXvoKi51e995ax8hDoss2NAb5eM45JRp0/6tZPsJ9uk58WWseJhOCGBCnnADex7tLKccosozbTYIjC9KR/fu3abfFvYQl4w9ej1brwg1HFYIzqGywC6MQ=
   - secure: mFmRAMY4ZdupA/Ef4Shc1MKgQP0MePxjmeyNPm4MpGqh19FecuOlWIeXZLawl1UqShKvuuv1kN63vyXdY4hibHvqKmhkp6NV9sD8TFsg4MwAQBmiYyb/n2grTRCONBPchhc2D+4qwUhghiuhzgbXxBY8zfClopF9VByq5mGS+W0R6ZyaRPXDxvMjAw90l4YSQ1mErvLr6+tMiVSTrZQCveYlTD6vnsQ5m5mqZjEmtZG+NAdIjzHL5VXT9TFmQEdsx8AoMgMD/UNT/1XMbIuW83umNT6uXA0VbRRWqbtB/hgbhaxV988uM+qYho1l57KARo0C/cKx1G3qL1AXXpmoZYHoPGuSm1e9gNk/L4xmmBxxHXbtZp4J72TX3+6zLKJc3+2ApoGvTplsd3C2wtv9qVCknLAAn8x4kfqZW3kYgkl996mXSvOfnhQ4iTQG+v7GOckSFHfsc9n8c+0p6y4yFL6Q9aKUlJeiCbNbUOBzK3HUcmHFqaAbmXrm9359QhNNYCHCAWDDdvt6maSrcWTQ6a+YRa47xVYB+IyItP4tJ1UyDmC9HvpapiFuXrC/FW4naPbLk1a3JwjcDVTI/i4SLuox6DiZr3L6PfpLhDLNhg6oyuTR6EwGQTB06WcE/7TZEF7Lte8/lGf5YD6k+lvKV5VYapJDE69xvhNSaBAZKm4=
   - secure: PTPv+5mUTomvPWNg41SNuFhzpWyki4yqvCzyyBYP9+PGV0QljVPiLuMDMv38OwH0vxhexQPcMJ9Aw2kPdj/k3S+y2DaP2Ecje+kfYZT/BM++k2uwWmKHL5w587fskBikdcyQkWzjR9qgrxSfEvtQdJK53novSSMpsOxeVMnjo28T2Y39yuGcdj9kd8Kxqiq8cMnrOp/LtDlywgQrYoXHQ3bKUn0vKxjZ3m03ghPtRO7t9SzqkdX2+RqEEheQj/ekbuGixwiCxRD3suFSkgNjau/BhgkQkbl0orvcg9TkBdWm6YnVTjMiTmE8gTayQ4IKo/62kM0s2UZObC4pcJG2RwT7samDCGr0/zOprrg9ROO7yg7ApryWw2xzb6UromJXFojsQP1MX8xUxQ3p6q7GdR21AaVQ5kqWTI1HEj+WRf/y3+kGY/yv8lo7nxJz8BkFrIZKSAIz1ychIjrugZ7fY9RWDMkj5ZnbTgQlvunQEx8ULjDOVeWIPX54F3JA2Mj0B8GwBdd8GW2BLElIV1MiNErXmyuwqBoTrLYia3L7bQ+UzZrDeJOw8bnEmJD/D1cI67XRXHfeLK2x+5ABh62yrdfc6kb1Poa+1fkiUf6CQmVmCxZxtyNQ+fGDpIHRRR4ygzY3bKmpVBypx+ZJKIzkQtECud7YhBIRNrrkoPdjOMc=
+  - secure: bPGf8hLM6vFFiSd07EuNnfxAyW8sc2/4BLpyawtFxx3DT4LbTHz83N+3+ZBX0s/1EAqn+BCZp0/etyYu/LHGrIBeJntTZmr79XLjMPXGYP3ou9kKVTTjH1MbqymW/qHyqbUmLPH1ah6C2fxBo+TLfhdsCrqa6CjCvE+cD3i+LgaCt45dTJYVkJg+dl6fuxM+3Dd7WMfQKJs7EZaKsWJ/ru8MNq29igjI6wOPWYOhX2TVqVtG37rV3bmFnavip09xtdJixzPfk/baTLQPvfLTkjZ/JBJ8f+tPofAEoWIKiz+EFoW9W/du7AeuqL/HIcELM9Kwb1QP98vgseMKS1DaFpuuBKFp7TzZ3HbhTvHCH45RuP+vCOIxRQjMPbEmG4BTcHNvMLeFqVhP0hlbLSKudukRAJcpUxk6tCwqsN8tQ5zeQ/yGYWeDrZ8On0OXO4fOvtQlGPSFRLhcJkJcZTyDffTdos+FKbtrvHjidmG6xkAl5b2EMxHa3HwhsdQe+v2jeZmfi31de6ssjYein62O7pWu6hD5ufGdfE7vcMmb6SyBkS6lEnv2yURkt9lIImeFcsRfS0DAi0i/xqSF4ZDLk8Hl/Pmem5Gp7gkNs55bNNG9gzCTND8WN5gQK5zjeSzlfys/z7397Xc2wQVYUWKisQtI81GBYZW4g7gHV9JNaqQ=
 after_success:
-    - echo ------------------------------
-    - echo ------------------------------
-    - ls -all
-    - cd forge-18/
-    - ls -all
-    - cd forge-18/build/
-    - ls -all
-    - cd forge-18/build/libs/
-    - ls -all
-    - echo ------------------------------
-    - echo ------------------------------
-    - export SSHPASS=$DEPLOY_PASS
-    - sshpass -e scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+- echo ------------------------------
+- echo ------------------------------
+- ls -all
+- cd forge-18/
+- ls -all
+- cd build/
+- ls -all
+- cd libs/
+- ls -all
+- echo ------------------------------
+- echo ------------------------------
+- export SSHPASS=$DEPLOY_PASS
+- sshpass -e scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
