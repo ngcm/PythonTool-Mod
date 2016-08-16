@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import org.apache.commons.io.filefilter.WildcardFileFilter;
+import org.apache.commons.lang3.SystemUtils;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -29,7 +30,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import pycraft.PyCraft;
-
 
 /**
  * ----------- PyCraft Mod -----------
@@ -55,8 +55,7 @@ public class ComputerBlock extends BlockContainer
 	public ComputerBlock()
 	{
 		super(Material.rock);
-		this.setCreativeTab(CreativeTabs.tabBlock);     // the block will appear on the Blocks tab.
-		//		this.setBlockBounds(1/16.0F, 0, 1/16.0F, 15/16.0F, 8/16.0F, 15/16.0F);
+		this.setCreativeTab(CreativeTabs.tabMisc);     // the block will appear on the Creative tab.
 	}
 
 	// Called when the block is placed or loaded client side to get the tile entity for the block
@@ -66,65 +65,83 @@ public class ComputerBlock extends BlockContainer
 		return new TileEntityComputerBlock();
 	}
 
+	public int getMetadataFromScriptItem(File scriptFile) {
+		/**
+		 * Obtain the metadata (if any) from the script file and return it.
+		 * Currently, this is achieved by adding the code
+		 * # metadata NUMBER
+		 * as the first line in the python script:
+		 *      NUMBER = 0 or no metadata at all: normal script
+		 *      NUMBER = 1: housing script
+		 *      NUMBER = 2: teleport script
+		 *      NUMBER = 3: light script
+		 */
+		int metadata = 0;
+		// Try to obtain the metadata, if any
+		BufferedReader br;
+		try
+		{
+			br = new BufferedReader(new FileReader(scriptFile));
+			String sCurrentLine;
+			sCurrentLine = br.readLine();
+			if ((sCurrentLine.length() > 11) && (sCurrentLine.substring(0, 10).equals("# metadata"))) {
+				try {
+					String metadataTemp = "" + sCurrentLine.substring(11, sCurrentLine.length());
+					metadata = Integer.parseInt(metadataTemp);
+				}
+				catch (NumberFormatException e) {
+					System.out.println("NOT VALID METADATA: not an integer, see code comments for details.");
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		// If any metadata is present, use it, otherwise, set it to 0 (default scriptItem)
+		if (metadata < 0 || metadata > 4) {
+			System.out.println("METADATA NOT A VALID INTEGER: see code comments for details.");
+			metadata = 0;
+		}
+		return metadata;
+	}
+
 	// Called when the block is right clicked
 	// In this block it is used to open the blocks gui when right clicked by a player
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {		
 		// Obtain the tile entity associated with the block using its position
-		// http://www.minecraftforge.net/forum/index.php?topic=29934.0
 		// then cast to our custom TileEntityInventoryBasic
 		TileEntity te = worldIn.getTileEntity(pos);
 		TileEntityComputerBlock tileEntityComputerBlock = (TileEntityComputerBlock) te;
+
+		// Find the scripts folder specified in the config menu
+		String scriptPathString = pycraft.configuration.PyCraftConfiguration.scriptPath;
+
 		// Find files in the given folder (mcpipy library folder by now)
-		File dir = new File(System.getProperty("user.home") + "/Library/Application Support/minecraft/mcpipy");
 		// Suitable files must be of the form test_*.py
+		File dir = new File(scriptPathString);
 		FileFilter fileFilter = new WildcardFileFilter("test_*.py");
 		File[] files = dir.listFiles(fileFilter);
+
 		// Clear all the slots before refilling
 		tileEntityComputerBlock.clear();
 		// Refill checking the existing python scripts 
 		for (int i = 0; i < files.length; i++) {
-			// Find metadata (script type, if any)
-			// The first line in the .py file must be '# metadata'
-			int metadata = 0;
+			// Find metadata (script type, if any), see helper function getMetadataFromSriptItem()
 			File tempFile = files[i]; 
-			// Try to obtain the metadata, if any
-			BufferedReader br;
-			try
-			{
-				br = new BufferedReader(new FileReader(tempFile));
-				String sCurrentLine;
-				sCurrentLine = br.readLine();
-				if ((sCurrentLine.length() > 11) && (sCurrentLine.substring(0, 10).equals("# metadata"))) {
-					try {
-						String metadataTemp = "" + sCurrentLine.substring(11, sCurrentLine.length());
-						metadata = Integer.parseInt(metadataTemp);
-					}
-					catch (NumberFormatException e) {
-						System.out.println("NOT VALID METADATA: not an integer, see code comments for details.");
-					}
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			// If any metadata is present, use it, otherwise, set it to 0 (default scriptItem)
-			if (metadata < 0 || metadata > 2) {
-				System.out.println("METADATA NOT A VALID INTEGER: see code comments for details.");
-				metadata = 0;
-			}
-
+			int metadata = getMetadataFromScriptItem(tempFile);
+			
+			// Create new item stack with the ScriptItem and get the NBT data ready
 			ItemStack newItemStack = new ItemStack(pycraft.scriptitem.StartupCommon.scriptItem, 1, metadata);
-			// Get NBT data from the created item
 			NBTTagCompound nbtTagCompound = newItemStack.getTagCompound();
 			if (nbtTagCompound == null) {
 				nbtTagCompound = new NBTTagCompound();
 				newItemStack.setTagCompound(nbtTagCompound);
 			}
-			// Save the script's path in "scriptName" key in the NBT compound
-			String pathString = tempFile.toString();
-			String[] nameList = pathString.split("\\/");
-			String nameString = nameList[nameList.length - 1].substring(0, nameList[nameList.length - 1].length() - 3);
+			// Save the script's name in "scriptName" key in the NBT compound			
+			String[] nameList = tempFile.getName().split("\\.(?=[^\\.]+$)");
+			String nameString = nameList[0];
 			nbtTagCompound.setString("scriptName", nameString);
+
 			// Place it in the computer block's inventory
 			tileEntityComputerBlock.setInventorySlotContents(i, newItemStack);
 		}
@@ -197,7 +214,7 @@ public class ComputerBlock extends BlockContainer
 
 	//---------------------------------------------------------
 	// Make sure the block is rendered facing the player
-	
+
 	public static final PropertyDirection PROPERTYFACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	@Override

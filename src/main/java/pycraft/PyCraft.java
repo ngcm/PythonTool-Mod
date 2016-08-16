@@ -19,7 +19,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * Main class for PyCraft Mod, used by Forge to interact with the mod during startup. 
  */
 
-@Mod(modid = PyCraft.MODID, version = PyCraft.VERSION, name = PyCraft.NAME)
+@Mod(modid = PyCraft.MODID, version = PyCraft.VERSION, name = PyCraft.NAME,
+	 guiFactory= PyCraft.GUIFACTORY)
 public class PyCraft {
 	// You also need to update the modid and version in two other places as well:
 	// 	 build.gradle file (the version, group, and archivesBaseName parameters)
@@ -27,6 +28,15 @@ public class PyCraft {
 	public static final String MODID = "pycraft";
 	public static final String VERSION = "1.0";
 	public static final String NAME = "PyCraft Mod";
+    public static final String GUIFACTORY = "pycraft.configuration.PyCraftGuiFactory";
+//    public static final String MODID = "magicbeans";
+//    public static final String MODNAME = "Magic Beans";
+//    public static final String MODVERSION = "1.0.0";
+//    public static final String MODDESCRIPTION = "Start the adventure by feeding a golden carrot to a grown-up cow.";
+//    public static final String MODAUTHOR = "jabelar";
+//    public static final String MODCREDITS = "Taliaailat, Jnaejnae";
+//    public static final String MODURL = "www.jabelarminecraft.blogspot.com";
+//    public static final String MODLOGO = "jackandbeanstalk.png";
 
 	// The instance of your mod that Forge uses. Optional.
 	@Mod.Instance(PyCraft.MODID)

@@ -27,6 +27,7 @@ public class ClientOnlyProxy extends CommonProxy
 	public void preInit()
 	{
 		super.preInit();    
+	    pycraft.configuration.StartupClientOnly.preInitClientOnly();
 		pycraft.computerblock.StartupClientOnly.preInitClientOnly();
 		pycraft.scriptitem.StartupClientOnly.preInitClientOnly();
 		pycraft.recipes.StartupClientOnly.preInitClientOnly();
@@ -39,6 +40,7 @@ public class ClientOnlyProxy extends CommonProxy
 	public void init()
 	{
 		super.init();
+	    pycraft.configuration.StartupClientOnly.initClientOnly();
 		pycraft.computerblock.StartupClientOnly.initClientOnly();
 		pycraft.scriptitem.StartupClientOnly.initClientOnly();
 		pycraft.recipes.StartupClientOnly.initClientOnly();
@@ -50,6 +52,7 @@ public class ClientOnlyProxy extends CommonProxy
 	public void postInit()
 	{
 		super.postInit();
+	    pycraft.configuration.StartupClientOnly.postInitClientOnly();
 		pycraft.computerblock.StartupClientOnly.postInitClientOnly();
 		pycraft.scriptitem.StartupClientOnly.postInitClientOnly();
 		pycraft.recipes.StartupClientOnly.postInitClientOnly();

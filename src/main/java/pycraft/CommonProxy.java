@@ -22,6 +22,7 @@ public abstract class CommonProxy {
 	 */
 	public void preInit()
 	{
+		pycraft.configuration.StartupCommon.preInitCommon();
 		pycraft.computerblock.StartupCommon.preInitCommon();
 		pycraft.scriptitem.StartupCommon.preInitCommon();
 		pycraft.recipes.StartupCommon.preInitCommon();
@@ -33,6 +34,7 @@ public abstract class CommonProxy {
 	 */
 	public void init()
 	{
+		pycraft.configuration.StartupCommon.initCommon();
 		pycraft.computerblock.StartupCommon.initCommon();
 		pycraft.scriptitem.StartupCommon.initCommon();
 		pycraft.recipes.StartupCommon.initCommon();
@@ -43,6 +45,7 @@ public abstract class CommonProxy {
 	 */
 	public void postInit()
 	{
+		pycraft.configuration.StartupCommon.postInitCommon();
 		pycraft.computerblock.StartupCommon.postInitCommon();
 		pycraft.scriptitem.StartupCommon.postInitCommon();
 		pycraft.recipes.StartupCommon.postInitCommon();
