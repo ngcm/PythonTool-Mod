@@ -8,12 +8,14 @@ dependencies:
   pre:
     - curl -o forge-18.zip http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-mdk.zip
     - unzip forge-18.zip -d forge-18
+    - cd forge-18
+    - chmod +x gradlew
+    - ./gradlew setupDecompWorkspace # --refresh-dependencies
+    - cd ..
     - mv build.gradle forge-18/
     - rm -r forge-18/src
     - mv src/ forge-18/src
     - cd forge-18
-    - chmod +x gradlew
-    - ./gradlew setupDecompWorkspace --refresh-dependencies
     - ./gradlew build
 test:
   # This is not a real test suite, just some sanity checks in terms of present folders.
