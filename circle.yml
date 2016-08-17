@@ -18,3 +18,8 @@ dependencies:
     - mv src forge-18/src/
     - cd forge-18
     - ./gradlew build
+test:
+  # This is not a real test suite, just some checks
+  override:
+    - pwd
+    - ls
