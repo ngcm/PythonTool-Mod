@@ -5,7 +5,7 @@ machine:
   #   version: openjdk6
 
 dependencies:
-  pre:
+  override:
     - chmod u+x scripts/install-dependencies.sh
     - ./scripts/install-dependencies.sh
     - chmod +x scripts/build.sh
