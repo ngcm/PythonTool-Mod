@@ -19,6 +19,7 @@ dependencies:
     - mv gradlew.bat forge-18/
     - mv src forge-18/src/
     - cd forge-18
+    - chmod +x gradlew
     - ./gradlew build
 test:
   # This is not a real test suite, just some checks
