@@ -10,8 +10,7 @@ dependencies:
     - ./scripts/install-dependencies.sh
     - chmod +x scripts/build.sh
     - ./scripts/build.sh
+    - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
 test:
-  # This is not a real test suite, just some sanity checks in terms of present folders.
   override:
-    - pwd
-    - ls
+    - echo "All done"
