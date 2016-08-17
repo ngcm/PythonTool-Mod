@@ -49,7 +49,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * Currently, this is achieved by adding the code # metadata NUMBER as the first line in the python script:
  *      NUMBER = 0 or no metadata at all: normal script
  *      NUMBER = 1: housing script
- *      ...
+ *      NUMBER = 2: teleport script
+ *      NUMBER = 3: light script
  */
 
 public class ScriptItem extends Item {
@@ -67,19 +68,19 @@ public class ScriptItem extends Item {
 	}
 
 	// add a subitem for each item we want to appear in the creative tab
-	//  in this case - a full bottle of each colour
+	// in this case - one script of each type, although the ones in the
+	// creative tab won't have any associated python scripts 
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item itemIn, CreativeTabs tab, List subItems)
 	{
-		ItemStack subItemStack1 = new ItemStack(itemIn, 1, 1);
-		subItems.add(subItemStack1);
-		ItemStack subItemStack2 = new ItemStack(itemIn, 1, 2);
-		subItems.add(subItemStack2);
+		for (int i = 0; i < 4; i++) {
+			ItemStack subItemStack = new ItemStack(itemIn, 1, i);
+			subItems.add(subItemStack);
+		}
 	}
 
 	@Override
-	// Make a unique name for each contents type (lime, orange, etc) so we can name them individually
-	//  The fullness information is added separately in getItemStackDisplayName()
+	// Make a unique name for each script type (standard, housing, teleport, light) so we can name them individually
 	public String getUnlocalizedName(ItemStack stack)
 	{
 		int metadata = stack.getMetadata();
@@ -119,7 +120,7 @@ public class ScriptItem extends Item {
 		return stack;
 	}
 
-	// adds 'tooltip' text
+	// Add 'tooltip' text
 	@SideOnly(Side.CLIENT)
 	@SuppressWarnings("unchecked")
 	@Override
@@ -133,15 +134,4 @@ public class ScriptItem extends Item {
 			tooltip.add("NO SCRIPT LOADED");
 		}
 	}
-
-	// change the displayed stack name depending on the fullness
-	// the contents are already incorporated into the unlocalizedName
-	@Override
-	public String getItemStackDisplayName(ItemStack stack)
-	{
-		String s = ("" + StatCollector.translateToLocal(this.getUnlocalizedName(stack) + ".name")).trim();
-		int metadata = stack.getMetadata();
-		return s;
-	}
-
 }

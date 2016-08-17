@@ -34,25 +34,19 @@ public class StartupClientOnly
 			ModelBakery.addVariantName(StartupCommon.scriptItem,
 					"pycraft:scriptItem_0",
 					"pycraft:scriptItem_1",
-					"pycraft:scriptItem_2"
+					"pycraft:scriptItem_2",
+					"pycraft:scriptItem_3"
 					);
 		}
 	}
 
 	public static void initClientOnly()
 	{
-		// Default script type
-		ModelResourceLocation itemModelResourceLocation0 = new ModelResourceLocation("pycraft:scriptItem_0", "inventory");
-		final int metadata0 = 0;
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(StartupCommon.scriptItem, metadata0, itemModelResourceLocation0);
-		// First script type
-		ModelResourceLocation itemModelResourceLocation1 = new ModelResourceLocation("pycraft:scriptItem_1", "inventory");
-		final int metadata1 = 1;
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(StartupCommon.scriptItem, metadata1, itemModelResourceLocation1);
-		// Second script type
-		ModelResourceLocation itemModelResourceLocation2 = new ModelResourceLocation("pycraft:scriptItem_2", "inventory");
-		final int metadata2 = 2;
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(StartupCommon.scriptItem, metadata2, itemModelResourceLocation2);
+		// Register all the PythonScript variants
+		for (int i = 0; i < 4; i++) {
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation("pycraft:scriptItem_" + i, "inventory");
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(StartupCommon.scriptItem, i, itemModelResourceLocation);
+		}
 	}
 
 	public static void postInitClientOnly()
