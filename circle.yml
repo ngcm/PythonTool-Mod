@@ -16,6 +16,7 @@ dependencies:
     - rm -r forge-18/src
     - mv src/ forge-18/src
     - cd forge-18
+    - ./gradlew tasks
     - ./gradlew build
 test:
   # This is not a real test suite, just some sanity checks in terms of present folders.
