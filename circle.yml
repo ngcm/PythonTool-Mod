@@ -21,7 +21,7 @@ dependencies:
     - mv ../src ./
     - ./gradlew build
 test:
-  # This is not a real test suite, just some checks
+  # This is not a real test suite, just some sanity checks in terms of present folders.
   override:
     - pwd
     - ls
