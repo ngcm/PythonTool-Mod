@@ -10,7 +10,13 @@ dependencies:
     - ./scripts/install-dependencies.sh
     - chmod +x scripts/build.sh
     - ./scripts/build.sh
-    - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+   
 test:
   override:
     - echo "All done"
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
