@@ -12,14 +12,13 @@ dependencies:
     - cd forge-18
     - chmod +x gradlew
     - ./gradlew setupDecompWorkspace --refresh-dependencies
-    - cd ..
-    - mv build.gradle forge-18/
-    - mv gradle forge-18/gradle/
-    - mv gradlew forge-18/
-    - mv gradlew.bat forge-18/
-    - mv src forge-18/src/
-    - cd forge-18
-    - chmod +x gradlew
+    # - cd ..
+    - mv ../build.gradle ./
+    # - mv gradle forge-18/gradle/
+    # - mv gradlew forge-18/
+    # - mv gradlew.bat forge-18/
+    - rm -rf src
+    - mv ../src ./
     - ./gradlew build
 test:
   # This is not a real test suite, just some checks
