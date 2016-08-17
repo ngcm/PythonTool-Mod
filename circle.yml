@@ -10,6 +10,7 @@ dependencies:
     # - sudo apt-get update; sudo apt-get install unzip
     - unzip forge-18.zip -d forge-18
     - cd forge-18
+    - chmod +x gradlew
     - ./gradlew setupDecompWorkspace --refresh-dependencies
     - cd ..
     - mv build.gradle forge-18/
