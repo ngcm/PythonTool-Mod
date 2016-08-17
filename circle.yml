@@ -7,7 +7,8 @@ machine:
 dependencies:
   pre:
     - curl -o forge-18.zip http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-mdk.zip
-    - sudo apt-get update; sudo apt-get install unzip
+    # - sudo apt-get update; sudo apt-get install unzip
+    - unzip forge-18.zip -d forge-18
     - cd forge-18
     - ./gradlew setupDecompWorkspace --refresh-dependencies
     - cd ..
