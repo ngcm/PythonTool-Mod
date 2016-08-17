@@ -1,8 +1,8 @@
 machine:
   timezone:
     Europe/London
-  java:
-    version: openjdk6
+  # java:
+  #   version: openjdk6
 
 dependencies:
   pre:
