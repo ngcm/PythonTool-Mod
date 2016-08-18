@@ -20,7 +20,8 @@ mv build.gradle forge-18/
 mv gradle forge-18/gradle/
 mv gradlew forge-18/
 mv gradlew.bat forge-18/
-mv src forge-18/src/
+rm -r forge-18/src
+mv src forge-18/
 
 echo ---------------------------------
 echo ----- FINISHED INSTALLATION -----
