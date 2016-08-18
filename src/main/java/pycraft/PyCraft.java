@@ -26,7 +26,7 @@ public class PyCraft {
 	// 	 build.gradle file (the version, group, and archivesBaseName parameters)
 	// 	 resources/mcmod.info (the name, description, and version parameters)
 	public static final String MODID = "pycraft";
-	public static final String VERSION = "1.0";
+	public static final String VERSION = "0.8";
 	public static final String NAME = "PyCraft Mod";
     public static final String GUIFACTORY = "pycraft.configuration.PyCraftGuiFactory";
 //    public static final String MODID = "magicbeans";
