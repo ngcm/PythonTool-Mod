@@ -17,6 +17,18 @@ import net.minecraftforge.fml.client.config.GuiConfigEntries.CategoryEntry;
 import net.minecraftforge.fml.client.config.IConfigElement;
 import pycraft.PyCraft;
 
+/**
+ * ----------- PyCraft Mod -----------
+ * Alvaro Perez & Hans Fangohr
+ * University of Southampton, UK (2016)
+ *
+ * Code based on MinecraftByExample by TheGreyGhost: MBE70_CONFIGURATION
+ * https://github.com/TheGreyGhost/MinecraftByExample/tree/1-8final
+ * (mbe30_configuration/MBEGuiFactory.java)
+ * 
+ * Creates the GUI for the config menu.
+ */
+
 public class PyCraftGuiFactory implements IModGuiFactory 
 {
 	//this class is accessed when Forge needs a GUI made relating to your mod (e.g. config GUI)

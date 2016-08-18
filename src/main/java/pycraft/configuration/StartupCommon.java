@@ -1,6 +1,15 @@
 package pycraft.configuration;
 
-/*
+/**
+ * ----------- PyCraft Mod -----------
+ * Alvaro Perez & Hans Fangohr
+ * University of Southampton, UK (2016)
+ *
+ * Code based on MinecraftByExample by TheGreyGhost: MBE30_INVENTORY_BASIC
+ * https://github.com/TheGreyGhost/MinecraftByExample/tree/1-8final
+ * (mbe30_inventory_basic/StartupCommon.java)
+ * 
+ * Original code by:
  * User: TW
  * Date: 2/4/2015
  * 
@@ -11,8 +20,8 @@ package pycraft.configuration;
  *  initClientOnly
  *  postInitCommon
  *  postInitClientOnly
- *  See MinecraftByExample class for more information
  */
+
 public class StartupCommon 
 {
 	public static void preInitCommon()

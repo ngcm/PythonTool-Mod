@@ -1,6 +1,15 @@
 package pycraft.configuration;
 
-/*
+/**
+ * ----------- PyCraft Mod -----------
+ * Alvaro Perez & Hans Fangohr
+ * University of Southampton, UK (2016)
+ *
+ * Code based on MinecraftByExample by TheGreyGhost: MBE70_CONFIGURATION
+ * https://github.com/TheGreyGhost/MinecraftByExample/tree/1-8final
+ * (mbe30_configuration/StartupClientOnly.java)
+ * 
+ * Original code by:
  * User: TW
  * Date: 2/4/2015
  *
@@ -11,7 +20,6 @@ package pycraft.configuration;
  *  initClientOnly
  *  postInitCommon
  *  postInitClientOnly
- *  See MinecraftByExample class for more information
  */
 
 public class StartupClientOnly {

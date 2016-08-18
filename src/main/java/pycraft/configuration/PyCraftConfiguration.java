@@ -15,7 +15,16 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import pycraft.PyCraft;
 
+
 /**
+ * ----------- PyCraft Mod -----------
+ * Alvaro Perez & Hans Fangohr
+ * University of Southampton, UK (2016)
+ *
+ * Code based on MinecraftByExample by TheGreyGhost: MBE70_CONFIGURATION
+ * https://github.com/TheGreyGhost/MinecraftByExample/tree/1-8final
+ * (mbe30_configuration/MBEConfiguration.java)
+ * 
  * Holds the configuration information and synchronises the various copies of it
  * The configuration information is stored in three places:
  * 1) in the configuration file on disk, as text

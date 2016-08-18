@@ -230,8 +230,9 @@ public class ComputerBlock extends BlockContainer
 
 		// Clear all the slots before refilling
 		tileEntityComputerBlock.clear();
-		// Refill checking the existing python scripts 
-		for (int i = 0; i < files.length; i++) {
+		// Refill checking the existing python scripts
+		int numberSlots = ContainerComputerBlock.TE_INVENTORY_SLOT_COUNT;
+		for (int i = 0; i < numberSlots; i++) {
 			// Find metadata (script type, if any), see helper function getMetadataFromSriptItem()
 			File tempFile = files[i]; 
 			int metadata = getMetadataFromScriptItem(tempFile);

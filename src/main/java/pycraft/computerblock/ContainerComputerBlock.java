@@ -44,9 +44,9 @@ public class ContainerComputerBlock extends Container {
 	private final int VANILLA_FIRST_SLOT_INDEX = 0;
 	
 	private final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
-	private final int TE_ROW_COUNT = 3;
-	private final int TE_COLUMN_COUNT = 9;
-	private final int TE_INVENTORY_SLOT_COUNT = TE_COLUMN_COUNT * TE_ROW_COUNT;
+	private final static int TE_ROW_COUNT = 3;
+	private final static int TE_COLUMN_COUNT = 9;
+	final static int TE_INVENTORY_SLOT_COUNT = TE_COLUMN_COUNT * TE_ROW_COUNT;
 
 	public ContainerComputerBlock(InventoryPlayer invPlayer, TileEntityComputerBlock tileEntityComputerBlock) {
 		this.tileEntityComputerBlock = tileEntityComputerBlock;
