@@ -6,8 +6,8 @@ import java.io.FileFilter;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
-import org.apache.commons.lang3.SystemUtils;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -24,6 +24,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.World;
@@ -76,6 +78,7 @@ public class ComputerBlock extends BlockContainer
 		 *      NUMBER = 2: teleport script
 		 *      NUMBER = 3: light script
 		 */
+
 		int metadata = 0;
 		// Try to obtain the metadata, if any
 		BufferedReader br;
@@ -104,6 +107,100 @@ public class ComputerBlock extends BlockContainer
 		return metadata;
 	}
 
+	public boolean syncScriptFiles(String mcpipyPathString, String scriptPathString, EntityPlayer player, World world) {
+		/**
+		 * Synchronise the Python scripts from the personal folder to the $minecraft/mcpipy folder in order
+		 * to allow RaspberryJam Mod to execute them. It will check existence and create all appropriate
+		 * directories as well as copy the scripts. If any step fails, it will print to the (readable) exception
+		 * to the player's chat and abort opening the ComputerBlock.
+		 */
+
+		// Check existence of $minecraft/mcpipy folder
+		File mcpipyFile = new File(mcpipyPathString);
+		if (!mcpipyFile.exists()) {
+			if (world.isRemote) {
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"The mcpipy folder specified in PyCraft-Mod config menu"));
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"does not exist. Please specify the correct folder!"));
+			}
+			return false;
+		}
+		// Check existence of $minecraft/mcpipy/mcpi folder
+		File mcpipyMcpiFile = new File(mcpipyPathString, "mcpi");
+		if (!mcpipyMcpiFile.exists()) {
+			if (world.isRemote) {
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"RaspberryJam Mod's mcpipy/mcpi is missing, replace or"));
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"reinstall!"));
+			}
+			return false;
+		}
+		// Check existence of personal script folder
+		File scriptFile = new File(scriptPathString);
+		if (!scriptFile.exists()) {
+			if (world.isRemote) {
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"The personal folder specified in PyCraft-Mod config menu"));
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"does not exist. Please specify the correct folder!"));
+			}
+			return false;
+		}
+		// Check existence of $minecraft/mcpipy/pycraft folder
+		File mcpipyPycraftFile = new File(mcpipyFile, "pycraft");
+		if (!mcpipyPycraftFile.exists()) {
+			mcpipyPycraftFile.mkdir();
+		}
+		// Check existence of $minecraft/mcpipy/pycraft/mcpi folder
+		File mcpipyPycraftMcpiFile = new File(mcpipyPycraftFile, "mcpi");
+		if (!mcpipyPycraftMcpiFile.exists()) {
+			// If it doesn't exist, copy it from mpcipy/mcpi
+			try {
+				FileUtils.copyDirectory(mcpipyMcpiFile, mcpipyPycraftMcpiFile);
+			} catch (IOException e) {
+				if (world.isRemote) {
+					player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+							"Cannot copy mcpipy library files to mcpipy/pycraft/mcpi!"));
+				}
+				return false;
+			}
+		}
+		// Copy auxiliary scripts fonts.py, text.py, mc.py to mcpipy/pycraft be able
+		// to execute RaspberryJam Mod's example scripts
+		try {
+			File fontsFile = new File(mcpipyFile, "fonts.py");
+			File textFile = new File(mcpipyFile, "text.py");
+			File mcFile = new File(mcpipyFile, "mc.py");
+			File fontsDestFile = new File(mcpipyPycraftFile, "fonts.py");
+			File textDestFile = new File(mcpipyPycraftFile, "text.py");
+			File mcDestFile = new File(mcpipyPycraftFile, "mc.py");
+			FileUtils.copyFile(fontsFile, fontsDestFile);
+			FileUtils.copyFile(textFile, textDestFile);
+			FileUtils.copyFile(mcFile, mcDestFile);
+		} catch (IOException e) {
+			if (world.isRemote) {
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"Cannot copy fonts, text, mc.py files to mcpipy/pycraft!"));
+			}
+			return false;
+		}
+		// Move the scripts from the personal directory to $minecraft/mcpipy/pycraft
+		try {
+			FileFilter fileFilter = new WildcardFileFilter("*.py");
+			FileUtils.copyDirectory(scriptFile, mcpipyPycraftFile, fileFilter);
+		} catch (IOException e) {
+			if (world.isRemote) {
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"Cannot copy personal scripts to mcpipy/pycraft!"));
+			}
+			return false;
+		}
+		// All good!
+		return true;
+	}
+
 	// Called when the block is right clicked
 	// In this block it is used to open the blocks gui when right clicked by a player
 	@Override
@@ -113,13 +210,22 @@ public class ComputerBlock extends BlockContainer
 		TileEntity te = worldIn.getTileEntity(pos);
 		TileEntityComputerBlock tileEntityComputerBlock = (TileEntityComputerBlock) te;
 
-		// Find the scripts folder specified in the config menu
+		// Get the mcpipy folder from the mod's config menu
+		String mcpipyPathString = pycraft.configuration.PyCraftConfiguration.mcpipyPath;
+		// Get the personal scripts folder from the mod's config menu
 		String scriptPathString = pycraft.configuration.PyCraftConfiguration.scriptPath;
 
-		// Find files in the given folder (mcpipy library folder by now)
-		// Suitable files must be of the form test_*.py
+		// Synchronise script files from your personal scripts folder to RaspberryJam's
+		// mcpipy folder
+		boolean syncResult;
+		syncResult = syncScriptFiles(mcpipyPathString, scriptPathString, playerIn, worldIn);
+		// If any exceptions found while syncing, cancel onRightClick!
+		if (!syncResult) return true;
+
+		// Find files in the given folder: scriptPathString
+		// Suitable files must be of the form *.py
 		File dir = new File(scriptPathString);
-		FileFilter fileFilter = new WildcardFileFilter("test_*.py");
+		FileFilter fileFilter = new WildcardFileFilter("*.py");
 		File[] files = dir.listFiles(fileFilter);
 
 		// Clear all the slots before refilling
@@ -129,7 +235,7 @@ public class ComputerBlock extends BlockContainer
 			// Find metadata (script type, if any), see helper function getMetadataFromSriptItem()
 			File tempFile = files[i]; 
 			int metadata = getMetadataFromScriptItem(tempFile);
-			
+
 			// Create new item stack with the ScriptItem and get the NBT data ready
 			ItemStack newItemStack = new ItemStack(pycraft.scriptitem.StartupCommon.scriptItem, 1, metadata);
 			NBTTagCompound nbtTagCompound = newItemStack.getTagCompound();

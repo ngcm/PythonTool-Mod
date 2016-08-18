@@ -3,6 +3,8 @@ package pycraft.scriptitem;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.commons.lang3.SystemUtils;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -87,6 +89,20 @@ public class ScriptItem extends Item {
 		return super.getUnlocalizedName() + "." + metadata;
 	}
 
+	public String getSeparator() {
+		/**
+		 * Auxiliary function.
+		 * Return the separator, \ in windows or / in unix (based) systems
+		 */
+		final String separator;
+		if (SystemUtils.IS_OS_WINDOWS) {
+			separator = "\\";
+		} else {
+			separator = "/";
+		}
+		return separator;
+	}
+
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		// Get the script path from the NBT data
@@ -101,15 +117,20 @@ public class ScriptItem extends Item {
 			return stack;
 		}
 
+		String separator = getSeparator();
 		if (world.isRemote) {
 			if (player.isSneaking()) { // shift pressed. Run new parallel script
 				String scriptName = nbtTagCompound.getString("scriptName");
 				MinecraftServer.getServer().getCommandManager().executeCommand(player,
-						"/apy " + scriptName);
+						"/apy " + "pycraft" + separator + scriptName);
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"/apy " + "pycraft" + separator + scriptName));
 			} else { // shift not pressed. Cancel previous scripts and run new script
-			String scriptName = nbtTagCompound.getString("scriptName");
-			MinecraftServer.getServer().getCommandManager().executeCommand(player,
-					"/python " + scriptName);
+				String scriptName = nbtTagCompound.getString("scriptName");
+				MinecraftServer.getServer().getCommandManager().executeCommand(player,
+						"/python " + "pycraft" + separator + scriptName);
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+						"/python " + "pycraft" + separator + scriptName));
 			}
 		}
 

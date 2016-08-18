@@ -42,7 +42,8 @@ import pycraft.PyCraft;
 public class PyCraftConfiguration {
 
 	//Declare all configuration fields used by the mod here
-	public static String scriptPath;
+	public static String mcpipyPath; // mcpipy folder in minecraft directory
+	public static String scriptPath; // desired script folder to place our own scripts
 	public static final String CATEGORY_NAME_GENERAL = "category_general";
 
 	public static void preInit() {
@@ -146,23 +147,28 @@ public class PyCraftConfiguration {
 		//  will be assigned the default value.
 		final String SCRIPT_PATH_DEFAULT_VALUE;
 		if (SystemUtils.IS_OS_WINDOWS) {
-			SCRIPT_PATH_DEFAULT_VALUE = System.getProperty("user.home") + "/AppData/Roaming/.minecraft/mcpipy";
-		} else if(SystemUtils.IS_OS_UNIX) {
-			SCRIPT_PATH_DEFAULT_VALUE = System.getProperty("user.home") + "/Library/Application Support/minecraft/mcpipy";
+			SCRIPT_PATH_DEFAULT_VALUE = System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\mcpipy";
 		} else if(SystemUtils.IS_OS_MAC) {
 			SCRIPT_PATH_DEFAULT_VALUE = System.getProperty("user.home") + "/Library/Application Support/minecraft/mcpipy";
+		} else if(SystemUtils.IS_OS_UNIX) {
+			SCRIPT_PATH_DEFAULT_VALUE = System.getProperty("user.home") + "/Library/Application Support/minecraft/mcpipy";
 		} else {
-			SCRIPT_PATH_DEFAULT_VALUE = "Unkown OS, set manually";
+			SCRIPT_PATH_DEFAULT_VALUE = "Unkown OS, must set manually";
 		}
 
-		Property propMyString = config.get(CATEGORY_NAME_GENERAL, "scriptPath", SCRIPT_PATH_DEFAULT_VALUE);
-		propMyString.comment = "Configuration string (scriptPath)";
-		propMyString.setLanguageKey("gui.configuration.scriptPath").setRequiresWorldRestart(true);
+		Property propMcpipyPath = config.get(CATEGORY_NAME_GENERAL, "mcpipyPath", SCRIPT_PATH_DEFAULT_VALUE);
+		propMcpipyPath.comment = "Configuration string (mcpipyPath)";
+		propMcpipyPath.setLanguageKey("gui.configuration.mcpipyPath").setRequiresWorldRestart(true);
+
+		Property propScriptPath = config.get(CATEGORY_NAME_GENERAL, "scriptPath", SCRIPT_PATH_DEFAULT_VALUE);
+		propScriptPath.comment = "Configuration string (scriptPath)";
+		propScriptPath.setLanguageKey("gui.configuration.scriptPath").setRequiresWorldRestart(true);
 
 		//By defining a property order we can control the order of the properties in the config file and GUI
 		//This is defined on a per config-category basis
 		List<String> propOrderGeneral = new ArrayList<String>();
-		propOrderGeneral.add(propMyString.getName());
+		propOrderGeneral.add(propMcpipyPath.getName());
+		propOrderGeneral.add(propScriptPath.getName());
 		config.setCategoryPropertyOrder(CATEGORY_NAME_GENERAL, propOrderGeneral);
 
 		// ---- step 3 - read the configuration property values into the class's variables (if readFieldsFromConfig) -------------------
@@ -174,7 +180,8 @@ public class PyCraftConfiguration {
 		if (readFieldsFromConfig) {
 			//If getInt cannot get an integer value from the config file value of myInteger (e.g. corrupted file)
 			// it will set it to the default value passed to the function
-			scriptPath = propMyString.getString();
+			mcpipyPath = propMcpipyPath.getString();
+			scriptPath = propScriptPath.getString();
 		}
 
 		// ---- step 4 - write the class's variables back into the config properties and save to disk -------------------
@@ -182,7 +189,8 @@ public class PyCraftConfiguration {
 		//  This is done even for a loadFromFile==true, because some of the properties may have been assigned default
 		//    values if the file was empty or corrupt.
 
-		propMyString.set(scriptPath);
+		propMcpipyPath.set(mcpipyPath);
+		propScriptPath.set(scriptPath);
 
 		if (config.hasChanged()) {
 			config.save();
