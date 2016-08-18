@@ -287,8 +287,6 @@ public class ComputerBlock extends BlockContainer
 		}
 	}
 
-	//---------------------------------------------------------
-
 	// the block will render in the SOLID layer.  See http://greyminecraftcoder.blogspot.co.at/2014/12/block-rendering-18.html for more information.
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()

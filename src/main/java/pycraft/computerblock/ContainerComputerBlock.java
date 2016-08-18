@@ -89,7 +89,7 @@ public class ContainerComputerBlock extends Container {
 				int slotNumber = y * TE_COLUMN_COUNT + x;
 				int xpos = TILE_INVENTORY_XPOS + x * SLOT_X_SPACING;
 				int ypos = TILE_INVENTORY_YPOS + y * SLOT_Y_SPACING;
-				addSlotToContainer(new Slot(tileEntityComputerBlock, slotNumber,  xpos, ypos));
+				addSlotToContainer(new CustomSlot(tileEntityComputerBlock, slotNumber,  xpos, ypos));
 			}
 		}
 	}

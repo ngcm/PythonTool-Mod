@@ -108,7 +108,7 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 	// inserting items via the gui
 	@Override
 	public boolean isItemValidForSlot(int slotIndex, ItemStack itemstack) {
-		return true;
+		return false;
 	}
 
 	// This is where you save any data that you don't want to lose when the tile entity unloads
