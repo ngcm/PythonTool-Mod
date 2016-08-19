@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.Math;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
@@ -232,7 +233,7 @@ public class ComputerBlock extends BlockContainer
 		tileEntityComputerBlock.clear();
 		// Refill checking the existing python scripts
 		int numberSlots = ContainerComputerBlock.TE_INVENTORY_SLOT_COUNT;
-		for (int i = 0; i < numberSlots; i++) {
+		for (int i = 0; i < Math.min(numberSlots, files.length); i++) {
 			// Find metadata (script type, if any), see helper function getMetadataFromSriptItem()
 			File tempFile = files[i]; 
 			int metadata = getMetadataFromScriptItem(tempFile);
