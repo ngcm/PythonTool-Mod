@@ -7,5 +7,5 @@ PyCraft Mod for Minecraft: an interactive way to interact with Minecraft using P
 
 ![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/media/recipe_cropped.png)
 ![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/media/computerbock_cropped.png)
-![ComputerBlock inventory](http://www.southampton.ac.uk/~apd1g15/media/computer_inventory_cropped.png)
+![ComputerBlock inventory](http://www.southampton.ac.uk/~apd1g15/media/computerblock_cropped.png)
 ![House ScriptItem](http://www.southampton.ac.uk/~apd1g15/media/scriptItem_house_cropped.png)
