@@ -5,7 +5,7 @@ PyCraft Mod for Minecraft: an interactive way to interact with Minecraft using P
 
 ![PyCraft-logo](http://www.southampton.ac.uk/~apd1g15/media/pycraft_logo_large.jpg)
 
-![PyCraft-logo](http://www.southampton.ac.uk/~apd1g15/media/recipe_cropped.png)
-![PyCraft-logo](http://www.southampton.ac.uk/~apd1g15/media/computerock_cropped.png)
-![PyCraft-logo](http://www.southampton.ac.uk/~apd1g15/media/computer_inventory_cropped.png)
-![PyCraft-logo](http://www.southampton.ac.uk/~apd1g15/media/scriptItem_house_cropped.png)
+![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/media/recipe_cropped.png)
+![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/media/computerbock_cropped.png)
+![ComputerBlock inventory](http://www.southampton.ac.uk/~apd1g15/media/computer_inventory_cropped.png)
+![House ScriptItem](http://www.southampton.ac.uk/~apd1g15/media/scriptItem_house_cropped.png)
