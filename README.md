@@ -3,5 +3,4 @@
 # PyCraft-Mod
 PyCraft Mod for Minecraft: an interactive way to interact with Minecraft using Python. Live!
 
-![PyCraft-logo](http://www.southampton.ac.uk/~apd1g15/media/1_enhanced.jpg)
-<img src="http://www.southampton.ac.uk/~apd1g15/media/1_enhanced.jpg" alt="PyCraft logo" align="middle">
+![PyCraft-logo](http://www.southampton.ac.uk/~apd1g15/media/pycraft_logo_large.jpg)
