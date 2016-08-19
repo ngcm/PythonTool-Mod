@@ -2,6 +2,6 @@
 
 # PyCraft-Mod
 
-[![pycraft_logo](http://www.southampton.ac.uk/~apd1g15/media/computer_inventory_cropped.png)](https://codebeat.co/projects/github-com-ngcm-pycraft-mod)
+[logo]: http://www.southampton.ac.uk/~apd1g15/media/computer_inventory_cropped.png "PyCraft logo"
 
 PyCraft Mod for Minecraft: an interactive way to interact with Minecraft using Python. Live!
