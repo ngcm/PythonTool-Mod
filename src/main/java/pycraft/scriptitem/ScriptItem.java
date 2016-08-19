@@ -123,14 +123,10 @@ public class ScriptItem extends Item {
 				String scriptName = nbtTagCompound.getString("scriptName");
 				MinecraftServer.getServer().getCommandManager().executeCommand(player,
 						"/apy " + "pycraft" + separator + scriptName);
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
-						"/apy " + "pycraft" + separator + scriptName));
 			} else { // shift not pressed. Cancel previous scripts and run new script
 				String scriptName = nbtTagCompound.getString("scriptName");
 				MinecraftServer.getServer().getCommandManager().executeCommand(player,
 						"/python " + "pycraft" + separator + scriptName);
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
-						"/python " + "pycraft" + separator + scriptName));
 			}
 		}
 
