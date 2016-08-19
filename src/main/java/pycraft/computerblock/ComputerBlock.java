@@ -83,11 +83,13 @@ public class ComputerBlock extends BlockContainer
 		int metadata = 0;
 		// Try to obtain the metadata, if any
 		BufferedReader br;
-		try
+		myLabel: try
 		{
 			br = new BufferedReader(new FileReader(scriptFile));
-			String sCurrentLine;
-			sCurrentLine = br.readLine();
+			String sCurrentLine = br.readLine();
+			if (sCurrentLine == null) {
+			    break myLabel;
+			}
 			if ((sCurrentLine.length() > 11) && (sCurrentLine.substring(0, 10).equals("# metadata"))) {
 				try {
 					String metadataTemp = "" + sCurrentLine.substring(11, sCurrentLine.length());
