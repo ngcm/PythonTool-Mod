@@ -10,7 +10,7 @@ This Forge mod builds on top of [Raspberry Jam Mod](https://github.com/arpruss/r
 
 ## Downloads
 
-[Pycraft for Minecraft 1.8](http://www.southampton.ac.uk/~apd1g15/pycraft/18/pycraft-18-0.8.jar)
+* [Pycraft for Minecraft 1.8](http://www.southampton.ac.uk/~apd1g15/pycraft/18/pycraft-18-0.8.jar)
 
 ## Instructions
 
@@ -19,7 +19,7 @@ Just craft the Computer Block and place it in your world.
 ![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/media/recipe_cropped.png)
 ![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/media/computerblock_cropped.png)
 
-Create (or download, dozens freely available!) your own Python scripts, using the [mcpipy library](), place your scripts in a folder called pycraft in your desktop, and open the Computer Block in the game.
+Create (or download, dozens freely available!) your own Python scripts, using the [mcpipy library](), place your scripts in a folder called *pycraft* in your desktop, and open the Computer Block in the game.
 
 ![ComputerBlock inventory](http://www.southampton.ac.uk/~apd1g15/media/computer_inventory_cropped.png)
 ![House ScriptItem](http://www.southampton.ac.uk/~apd1g15/media/scriptItem_house_cropped.png)
