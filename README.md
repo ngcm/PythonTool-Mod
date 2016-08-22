@@ -5,8 +5,7 @@ PyCraft Mod for Minecraft: an interactive way to interact with Minecraft using P
 
 ![PyCraft-logo-large](http://www.southampton.ac.uk/~apd1g15/media/pycraft_logo_large.jpg)
 
-This mod builds on top of [RaspberryJam Mod](https://www.google.com), 
-[RaspberryJam Mod](https://www.google.com){:target="_blank"}
+This Forge mod builds on top of [Raspberry Jam Mod](https://github.com/arpruss/raspberryjammod) and provides a visual interface to use in-game Python scripts.
 
 ![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/media/recipe_cropped.png)
 ![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/media/computerblock_cropped.png)
