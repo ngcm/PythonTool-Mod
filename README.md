@@ -20,10 +20,10 @@ Create (or download, dozens freely available!) your own Python scripts, using th
 ![ComputerBlock inventory](http://www.southampton.ac.uk/~apd1g15/media/computer_inventory_cropped.png)
 ![House ScriptItem](http://www.southampton.ac.uk/~apd1g15/media/scriptItem_house_cropped.png)
 
-## Installation
-
-Blah blah
-
 You will see all those scripts in your pycraft folder as Script Items in the game, equip your favourite and right-click it to get it running!
 
 ![Castle](http://www.southampton.ac.uk/~apd1g15/media/castle_cropped.png)
+
+## Installation
+
+Blah blah
