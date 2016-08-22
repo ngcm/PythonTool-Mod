@@ -10,7 +10,7 @@ This Forge mod builds on top of [Raspberry Jam Mod](https://github.com/arpruss/r
 
 ## Downloads
 
-![Pycraft for Minecraft 1.8](http://www.southampton.ac.uk/~apd1g15/pycraft/18/pycraft-18-0.8.jar)
+[Pycraft for Minecraft 1.8](http://www.southampton.ac.uk/~apd1g15/pycraft/18/pycraft-18-0.8.jar)
 
 ## Instructions
 
