@@ -3,7 +3,7 @@
 # PyCraft-Mod for Minecraft
 #### Interactively alter your Minecraft world in real time, using Python.
 
-![PyCraft-logo-large](http://www.southampton.ac.uk/~apd1g15/media/pycraft_logo_large.jpg)
+![PyCraft-logo-large](http://www.southampton.ac.uk/~apd1g15/pycraft/media/pycraft_logo_large.jpg)
 
 Build arbitrary things, turn blocks into bombs or create interactive games, just with one click!
 This Forge mod builds on top of [Raspberry Jam Mod](https://github.com/arpruss/raspberryjammod) and provides a visual interface to use in-game Python scripts.
@@ -16,18 +16,43 @@ This Forge mod builds on top of [Raspberry Jam Mod](https://github.com/arpruss/r
 
 Just craft the Computer Block and place it in your world.
 
-![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/media/recipe_cropped.png)
-![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/media/computerblock_cropped.png)
+![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/pycraft/media/recipe_cropped.png)
+![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/pycraft/media/computerblock_cropped.png)
 
 Create (or download, dozens freely available!) your own Python scripts, using the [mcpipy library](), place your scripts in a folder called *pycraft* in your desktop, and open the Computer Block in the game.
 
-![ComputerBlock inventory](http://www.southampton.ac.uk/~apd1g15/media/computer_inventory_cropped.png)
-![House ScriptItem](http://www.southampton.ac.uk/~apd1g15/media/scriptItem_house_cropped.png)
+![ComputerBlock inventory](http://www.southampton.ac.uk/~apd1g15/pycraft/media/computer_inventory_cropped.png)
+![House ScriptItem](http://www.southampton.ac.uk/~apd1g15/pycraft/media/scriptItem_house_cropped.png)
 
 You will see all those scripts in your pycraft folder as Script Items in the game, equip your favourite and right-click it to get it running!
 
-![Castle](http://www.southampton.ac.uk/~apd1g15/media/castle_cropped.png)
+![Castle](http://www.southampton.ac.uk/~apd1g15/pycraft/media/castle_cropped.png)
 
 ## Installation
 
-Blah blah
+1. Download Minecraft: visit https://minecraft.net/en/ and log-in with your account, download the game selecting Windows/Mac OS/Linux as corresponding to your system.
+2. Install Minecraft: using the installer you've just downloaded, follow the instructions! It would be better to install it in the default folder. If for some reason you don't want it there, remember your custom installation path.
+3. Open Minecraft: after some downloads, log-in using your username and password. You will get to the Minecraft launcher.
+
+    So far, this is just installing Minecraft, as your would do normally. Now we need to select the desired version and install it *****.
+
+4. Click on *Edit Profile*
+5. Click on *Use version:* and select ******
+6. Click on *Save Profile*
+7. Click *Play*, to download and open the game. Once the game is loaded, we can quit it to install our mod.
+    
+    We will now download Forge, the most popular Minecraft Mod launcher. There are thousands of mods available online, PyCraft is just one of them, go check some out!
+
+8. Download Forge ****** http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-installer.jar
+9. Install Forge: open the file you've just downloaded and select *Install client* and the Minecraft installation path: if you used the default one, just click *OK*, if you changed it, point the installer to your custom intallation path.
+10. Open Minecraft, click on *Profile*, now there should be a new user apart from your user name, select *forge*. On the right hand side it should say *Ready to update & play Minecraft 1.8-forge...*. If it doesn't, repeat step 5, and select the option at the botton of the *Use version:* list. When it's ready, click *Play*.
+11. You should see a slightly different Minecraft main menu, there should be some info on the bottom-left, and a new *Mods* button. Great, you're nearly there!
+
+    Now we only need to download PyCraft and place it in the right folder!
+    
+12. Download PyCraft from the [download section](#downloads) of this website
+13. Move this file to Forge's mods folder, which is located in your Minecraft installation folder. Default installation paths are:
+    * Windows: Users\**yourUser**\AppData\Roaming\.minecraft\mods
+    * Mac OS: /Library/Application Support/minecraft/mods
+    * Linux: ******
+If you changed it when you installed Minecraft, use your custom path.
