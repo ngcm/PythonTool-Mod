@@ -8,6 +8,10 @@
 Build arbitrary things, turn blocks into bombs or create interactive games, just with one click!
 This Forge mod builds on top of [Raspberry Jam Mod](https://github.com/arpruss/raspberryjammod) and provides a visual interface to use in-game Python scripts.
 
+## Downloads
+
+![Pycraft for Minecraft 1.8](http://www.southampton.ac.uk/~apd1g15/pycraft/18/pycraft-18-0.8.jar)
+
 ## Instructions
 
 Just craft the Computer Block and place it in your world.
