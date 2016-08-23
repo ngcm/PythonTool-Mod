@@ -16,7 +16,7 @@ This Forge mod builds on top of [Raspberry Jam Mod](https://github.com/arpruss/r
 
 ## User guide
 
-Just craft the Computer Block and place it in your world.
+Just craft the Computer Block and place it in your world. It can also be found in the Miscellaneous creative tab.
 
 ![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/pycraft/media/recipe_cropped.png)
 ![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/pycraft/media/computerblock_cropped.png)
@@ -29,6 +29,8 @@ Create (or download, dozens freely available!) your own Python scripts, using th
 You will see all those scripts in your pycraft folder as Script Items in the game, equip your favourite and right-click it to get it running!
 
 ![Castle](http://www.southampton.ac.uk/~apd1g15/pycraft/media/castle_cropped.png)
+
+Shift+right click will run the equiped Script Item without stopping any previous running scripts.
 
 ## Installation guide
 
