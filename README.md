@@ -30,7 +30,7 @@ You will see all those scripts in your pycraft folder as Script Items in the gam
 
 ![Castle](http://www.southampton.ac.uk/~apd1g15/pycraft/media/castle_cropped.png)
 
-Shift+right click will run the equiped Script Item without stopping any previous running scripts. Right click will stop *all* running scripts.
+Shift+right click will run the equiped Script Item without stopping any previous running scripts. Right click will stop *all* running scripts *and* execute the new one.
 
 ---
 
@@ -39,13 +39,13 @@ Shift+right click will run the equiped Script Item without stopping any previous
 ### Download and install Minecraft
 
 1. Download Minecraft: visit https://minecraft.net/en/ and log-in with your account, download the game selecting Windows/Mac OS/Linux as corresponding to your system.
-2. Install Minecraft: using the installer you've just downloaded, follow the instructions! It would be better to install it in the default folder. If for some reason you don't want it there, remember your custom installation path.
+2. Install Minecraft: using the installer you've just downloaded, just follow the instructions! It would be better to install it in the default folder. If for some reason you don't want it there, change it and remember your custom installation path.
 3. Open Minecraft: after some downloads, log-in using your username and password. You will get to the Minecraft launcher.
 
 ### Get Minecraft ready for Forge (mod loader)
 
 4. Click on *Edit Profile*
-5. Click on *Use version:* and select ******
+5. Click on *Use version:* and select the game version of your choice (see above that Pycraft is available for a number of recent Minecraft versions, choose your favourite!)
 6. Click on *Save Profile*
 7. Click *Play*, to download and open the game. Once the game is loaded at least once, we can go ahead and download Forge.
 
