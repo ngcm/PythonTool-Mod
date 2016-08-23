@@ -44,20 +44,21 @@ Shift+right click will run the equiped Script Item without stopping any previous
 
 ### Get Minecraft ready for Forge (mod loader)
 
-4. Click on *Edit Profile*
-5. Click on *Use version:* and select the game version of your choice (see above that Pycraft is available for a number of recent Minecraft versions, choose your favourite!)
-6. Click on *Save Profile*
-7. Click *Play*, to download and open the game. Once the game is loaded at least once, we can go ahead and download Forge.
+1. Click on *Edit Profile*
+2. Click on *Use version:* and select the game version of your choice (see above that Pycraft is available for a number of recent Minecraft versions, choose your favourite!)
+3. Click on *Save Profile*
+4. Click *Play*, to download and open the game. Once the game is loaded at least once, we can go ahead and download Forge.
 
 ### Download and install Forge
 
-8. Download Forge ****** http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-installer.jar
-9. Install Forge: open the file you've just downloaded and select *Install client* and the Minecraft installation path: if you used the default one, just click *OK*, if you changed it, point the installer to your custom intallation path.
-10. Open Minecraft, click on *Profile*, now there should be a new user apart from your user name, select *forge*. On the right hand side it should say *Ready to update & play Minecraft 1.8-forge...*. If it doesn't, repeat step 5, and select the option at the botton of the *Use version:* list. When it's ready, click *Play*.
-11. You should see a slightly different Minecraft main menu, there should be some info on the bottom-left, and a new *Mods* button. Great, you're nearly there!
+1. Download Forge ****** http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-installer.jar
+2. Install Forge: open the file you've just downloaded and select *Install client* and the Minecraft installation path: if you used the default one, just click *OK*, if you changed it, point the installer to your custom intallation path.
+3. Open Minecraft, click on *Profile*, now there should be a new user apart from your user name, select *forge*. On the right hand side it should say *Ready to update & play Minecraft 1.8-forge...*. If it doesn't, repeat step 5, and select the option at the botton of the *Use version:* list. When it's ready, click *Play*.
+4. You should see a slightly different Minecraft main menu, there should be some info on the bottom-left, and a new *Mods* button. Great, you're nearly there!
 
 ### Install RaspberryJam Mod
 
+1. Visit [RaspberryJam's website] (https://github.com/arpruss/raspberryjammod/releases/latest)
 
 ### Install PyCraft!
 
