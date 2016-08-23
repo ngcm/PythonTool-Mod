@@ -30,30 +30,37 @@ You will see all those scripts in your pycraft folder as Script Items in the gam
 
 ![Castle](http://www.southampton.ac.uk/~apd1g15/pycraft/media/castle_cropped.png)
 
-Shift+right click will run the equiped Script Item without stopping any previous running scripts.
+Shift+right click will run the equiped Script Item without stopping any previous running scripts. Right click will stop *all* running scripts.
+
+---
 
 ## Installation guide
+
+### Download and install Minecraft
 
 1. Download Minecraft: visit https://minecraft.net/en/ and log-in with your account, download the game selecting Windows/Mac OS/Linux as corresponding to your system.
 2. Install Minecraft: using the installer you've just downloaded, follow the instructions! It would be better to install it in the default folder. If for some reason you don't want it there, remember your custom installation path.
 3. Open Minecraft: after some downloads, log-in using your username and password. You will get to the Minecraft launcher.
 
-    So far, this is just installing Minecraft, as your would do normally. Now we need to select the desired version and install it *****.
+### Get Minecraft ready for Forge (mod loader)
 
 4. Click on *Edit Profile*
 5. Click on *Use version:* and select ******
 6. Click on *Save Profile*
-7. Click *Play*, to download and open the game. Once the game is loaded, we can quit it to install our mod.
-    
-    We will now download Forge, the most popular Minecraft Mod launcher. There are thousands of mods available online, PyCraft is just one of them, go check some out!
+7. Click *Play*, to download and open the game. Once the game is loaded at least once, we can go ahead and download Forge.
+
+### Download and install Forge
 
 8. Download Forge ****** http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.4.1563/forge-1.8-11.14.4.1563-installer.jar
 9. Install Forge: open the file you've just downloaded and select *Install client* and the Minecraft installation path: if you used the default one, just click *OK*, if you changed it, point the installer to your custom intallation path.
 10. Open Minecraft, click on *Profile*, now there should be a new user apart from your user name, select *forge*. On the right hand side it should say *Ready to update & play Minecraft 1.8-forge...*. If it doesn't, repeat step 5, and select the option at the botton of the *Use version:* list. When it's ready, click *Play*.
 11. You should see a slightly different Minecraft main menu, there should be some info on the bottom-left, and a new *Mods* button. Great, you're nearly there!
 
-    Now we only need to download PyCraft and place it in the right folder!
-    
+### Install RaspberryJam Mod
+
+
+### Install PyCraft!
+
 12. Download PyCraft from the [download section](#downloads) of this website
 13. Move this file to Forge's mods folder, which is located in your Minecraft installation folder. Default installation paths are:
     * Windows: Users\**yourUser**\AppData\Roaming\.minecraft\mods
