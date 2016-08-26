@@ -2,7 +2,7 @@ machine:
   timezone:
     Europe/London
   environment:
-    _JAVA_OPTIONS: "-Xms512m -Xmx1024m"
+    _JAVA_OPTIONS: "-Xms2048m -Xmx2048m"
 
 dependencies:
   override:
