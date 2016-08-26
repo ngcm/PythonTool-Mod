@@ -62,7 +62,7 @@ public class ClientOnlyProxy extends CommonProxy
 	public boolean playerIsInCreativeMode(EntityPlayer player) {
 		if (player instanceof EntityPlayerMP) {
 			EntityPlayerMP entityPlayerMP = (EntityPlayerMP)player;
-			return entityPlayerMP.theItemInWorldManager.isCreative();
+			return entityPlayerMP.interactionManager.isCreative();
 		} else if (player instanceof EntityPlayerSP) {
 			return Minecraft.getMinecraft().playerController.isInCreativeMode();
 		}
