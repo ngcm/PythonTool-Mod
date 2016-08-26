@@ -1,15 +1,10 @@
 machine:
   timezone:
     Europe/London
-  # java:
-  #   version: openjdk6
 
 dependencies:
   override:
-    - chmod u+x scripts/install-dependencies.sh
-    - ./scripts/install-dependencies.sh
-    - chmod +x scripts/build.sh
-    - ./scripts/build.sh
+    - echo "All good"
    
 test:
   override:
@@ -19,5 +14,5 @@ deployment:
   release:
     branch: master
     commands:
-      - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_18
+      - echo "All deployed"
 
