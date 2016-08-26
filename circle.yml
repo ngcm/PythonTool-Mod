@@ -16,11 +16,7 @@ test:
     - echo "All done"
 
 deployment:
-  release:
-    branch: master
+  minecraft194:
+    branch: minecraft194
     commands:
-      - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-  testing:
-    branch: testing
-    commands:
-      - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_TESTING
+      - scp forge/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_194
