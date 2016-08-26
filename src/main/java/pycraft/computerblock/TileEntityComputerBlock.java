@@ -1,16 +1,16 @@
 package pycraft.computerblock;
 
+import java.util.Arrays;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.IChatComponent;
-
-import java.util.Arrays;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 
 /**
  * ----------- PyCraft Mod -----------
@@ -49,7 +49,7 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 
 	/**
 	 * Removes some of the units from itemstack in the given slot, and returns as a separate itemstack
- 	 * @param slotIndex the slot number to remove the items from
+	 * @param slotIndex the slot number to remove the items from
 	 * @param count the number of units to remove
 	 * @return a new itemstack containing the units removed from the slot
 	 */
@@ -68,7 +68,7 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 				setInventorySlotContents(slotIndex, null);
 			}
 		}
-	  markDirty();
+		markDirty();
 		return itemStackRemoved;
 	}
 
@@ -114,7 +114,7 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 	// This is where you save any data that you don't want to lose when the tile entity unloads
 	// In this case, it saves the itemstacks stored in the container
 	@Override
-	public void writeToNBT(NBTTagCompound parentNBTTagCompound)
+	public NBTTagCompound writeToNBT(NBTTagCompound parentNBTTagCompound)
 	{
 		super.writeToNBT(parentNBTTagCompound); // The super call is required to save and load the tileEntity's location
 
@@ -133,7 +133,11 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 		}
 		// the array of hashmaps is then inserted into the parent hashmap for the container
 		parentNBTTagCompound.setTag("Items", dataForAllSlots);
+
+		return parentNBTTagCompound;
 	}
+
+
 
 	// This is where you load the data that you saved in writeToNBT
 	@Override
@@ -173,8 +177,8 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 
 	// standard code to look up what the human-readable name is
 	@Override
-	public IChatComponent getDisplayName() {
-		return this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName());
+	public ITextComponent getDisplayName() {
+		return this.hasCustomName() ? new TextComponentString(this.getName()) : new TextComponentTranslation(this.getName());
 	}
 
 	// -----------------------------------------------------------------------------------------------------------
@@ -187,7 +191,7 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 	 * @return
 	 */
 	@Override
-	public ItemStack getStackInSlotOnClosing(int slotIndex) {
+	public ItemStack removeStackFromSlot(int slotIndex) {
 		ItemStack itemStack = getStackInSlot(slotIndex);
 		if (itemStack != null) setInventorySlotContents(slotIndex, null);
 		return itemStack;

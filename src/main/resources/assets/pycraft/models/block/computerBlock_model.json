@@ -1,5 +1,5 @@
 {
-    "ambientocclusion": true,
+    "parent": "block/cube",
     "textures": {
         "pole": "pycraft:blocks/computerBlock_pole",
         "base_front" : "pycraft:blocks/computerBlock_base_front",

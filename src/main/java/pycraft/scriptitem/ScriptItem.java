@@ -1,19 +1,20 @@
 package pycraft.scriptitem;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.apache.commons.lang3.SystemUtils;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.StatCollector;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -61,7 +62,7 @@ public class ScriptItem extends Item {
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setUnlocalizedName("scriptItem");
-		this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setCreativeTab(CreativeTabs.MISC);
 	}
 
 	@Override
@@ -104,28 +105,28 @@ public class ScriptItem extends Item {
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+	public ActionResult<ItemStack> onItemRightClick(ItemStack stack, World world, EntityPlayer player, EnumHand hand)	{
 		// Get the script path from the NBT data
 		NBTTagCompound nbtTagCompound = stack.getTagCompound();
 		if (nbtTagCompound == null) {
 			if (world.isRemote) {
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"NO ASSOCIATED SCRIPT"));
 			}
 			// Decrease stack size
 			stack.stackSize--;
-			return stack;
+			return new ActionResult(EnumActionResult.PASS, stack);
 		}
 
 		String separator = getSeparator();
-		if (world.isRemote) {
+		if (!world.isRemote) {
 			if (player.isSneaking()) { // shift pressed. Run new parallel script
 				String scriptName = nbtTagCompound.getString("scriptName");
-				MinecraftServer.getServer().getCommandManager().executeCommand(player,
+				Minecraft.getMinecraft().thePlayer.getServer().getCommandManager().executeCommand(player,
 						"/apy " + "pycraft" + separator + scriptName);
 			} else { // shift not pressed. Cancel previous scripts and run new script
 				String scriptName = nbtTagCompound.getString("scriptName");
-				MinecraftServer.getServer().getCommandManager().executeCommand(player,
+				world.getMinecraftServer().getCommandManager().executeCommand(player,
 						"/python " + "pycraft" + separator + scriptName);
 			}
 		}
@@ -134,7 +135,7 @@ public class ScriptItem extends Item {
 		if (!player.capabilities.isCreativeMode) {
 			stack.stackSize--;
 		}
-		return stack;
+		return new ActionResult(EnumActionResult.PASS, stack);
 	}
 
 	// Add 'tooltip' text
