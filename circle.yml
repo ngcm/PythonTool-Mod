@@ -19,4 +19,4 @@ deployment:
   minecraft19:
     branch: minecraft19
     commands:
-      - scp forge/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_189
+      - scp forge/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_19
