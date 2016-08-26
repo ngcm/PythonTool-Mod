@@ -5,7 +5,7 @@ echo --------- STARTING BUILD --------
 echo ---------------------------------
 
 # Build
-cd forge-18
+cd forge
 chmod +x gradlew
 ./gradlew build
 
