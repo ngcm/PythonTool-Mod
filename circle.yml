@@ -20,7 +20,4 @@ deployment:
     branch: minecraft18
     commands:
       - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_18
-  testing:
-    branch: testing
-    commands:
-      - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_TESTING
+
