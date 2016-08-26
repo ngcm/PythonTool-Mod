@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.apache.commons.lang3.SystemUtils;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -74,7 +74,7 @@ public class PyCraftConfiguration {
 		//register the save config handler to the forge mod loader event bus
 		// creates an instance of the static class ConfigEventHandler and has it listen
 		// on the FML bus (see Notes and ConfigEventHandler for more information)
-		FMLCommonHandler.instance().bus().register(new ConfigEventHandler());
+		MinecraftForge.EVENT_BUS.register(new ConfigEventHandler());
 	}
 
 	public static Configuration getConfig()
@@ -166,11 +166,11 @@ public class PyCraftConfiguration {
 		}
 
 		Property propMcpipyPath = config.get(CATEGORY_NAME_GENERAL, "mcpipyPath", SCRIPT_PATH_DEFAULT_VALUE);
-		propMcpipyPath.comment = "Configuration string (mcpipyPath)";
+		propMcpipyPath.setComment("Configuration string (mcpipyPath)");
 		propMcpipyPath.setLanguageKey("gui.configuration.mcpipyPath").setRequiresWorldRestart(true);
 
 		Property propScriptPath = config.get(CATEGORY_NAME_GENERAL, "scriptPath", SCRIPT_PATH_DEFAULT_VALUE);
-		propScriptPath.comment = "Configuration string (scriptPath)";
+		propScriptPath.setComment("Configuration string (scriptPath)");
 		propScriptPath.setLanguageKey("gui.configuration.scriptPath").setRequiresWorldRestart(true);
 
 		//By defining a property order we can control the order of the properties in the config file and GUI
@@ -216,9 +216,9 @@ public class PyCraftConfiguration {
 		 */
 		@SubscribeEvent(priority = EventPriority.NORMAL)
 		public void onEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
-			if (PyCraft.MODID.equals(event.modID)
-					&& !event.isWorldRunning) {
-				if (event.configID.equals(CATEGORY_NAME_GENERAL)) {
+			if (PyCraft.MODID.equals(event.getModID())
+					&& !event.isWorldRunning()) {
+				if (event.getConfigID().equals(CATEGORY_NAME_GENERAL)) {
 					syncFromGUI();
 				}
 			}

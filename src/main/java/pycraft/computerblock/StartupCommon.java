@@ -1,9 +1,9 @@
 package pycraft.computerblock;
 
-import pycraft.GuiHandlerRegistry;
-import net.minecraft.block.Block;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import pycraft.GuiHandlerRegistry;
 import pycraft.PyCraft;
 
 /**
@@ -31,16 +31,23 @@ import pycraft.PyCraft;
 
 public class StartupCommon
 {
-	public static Block computerBlock;  // this holds the unique instance of your block
-
+	public static ComputerBlock computerBlock;  // this holds the unique instance of your block
+	public static ItemBlock itemComputerBlock; // and the corresponding item form that block
+	
 	public static void preInitCommon()
 	{
-		// each instance of your block should have a name that is unique within your mod.  use lower case.
-		computerBlock = new ComputerBlock().setUnlocalizedName("computerBlock");
-		GameRegistry.registerBlock(computerBlock, "computerBlock");
+		// Create and register an instance of the Computer Block
+		computerBlock = (ComputerBlock)(new ComputerBlock().setRegistryName("computerBlock"));
+		computerBlock.setUnlocalizedName(computerBlock.getRegistryName().toString());
+		GameRegistry.register(computerBlock);
+		
+		// Same but for the associated item
+		itemComputerBlock = new ItemBlock(computerBlock);
+		itemComputerBlock.setRegistryName(computerBlock.getRegistryName());
+		GameRegistry.register(itemComputerBlock);
+		
 		// Each of your tile entities needs to be registered with a name that is unique to your mod.
 		GameRegistry.registerTileEntity(TileEntityComputerBlock.class, "computerBlock_tile");
-		// you don't need to register an item corresponding to the block, GameRegistry.registerBlock does this automatically.
 
 		// You need to register a GUIHandler for the container.  However there can be only one handler per mod, so for the purposes
 		//   of this project, we create a single GuiHandlerRegistry for all examples.

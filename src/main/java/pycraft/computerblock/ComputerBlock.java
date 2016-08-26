@@ -5,16 +5,15 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.Math;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 
-import net.minecraft.block.BlockContainer;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,15 +23,16 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import pycraft.PyCraft;
+
 
 /**
  * ----------- PyCraft Mod -----------
@@ -53,7 +53,7 @@ import pycraft.PyCraft;
  * later use. The actual storage is handled by the tile entity.
  */
 
-public class ComputerBlock extends BlockContainer
+public class ComputerBlock extends Block
 {
 	public ComputerBlock()
 	{
@@ -64,10 +64,16 @@ public class ComputerBlock extends BlockContainer
 	// Called when the block is placed or loaded client side to get the tile entity for the block
 	// Should return a new instance of the tile entity for the block
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
+	public TileEntity createTileEntity(World worldIn, IBlockState state) {
 		return new TileEntityComputerBlock();
 	}
 
+	@Override
+    public boolean hasTileEntity(IBlockState state)
+    {
+        return true;
+    }
+	
 	public int getMetadataFromScriptItem(File scriptFile) {
 		/**
 		 * Obtain the metadata (if any) from the script file and return it.
@@ -122,9 +128,9 @@ public class ComputerBlock extends BlockContainer
 		File mcpipyFile = new File(mcpipyPathString);
 		if (!mcpipyFile.exists()) {
 			if (world.isRemote) {
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"The mcpipy folder specified in PyCraft-Mod config menu"));
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"does not exist. Please specify the correct folder!"));
 			}
 			return false;
@@ -133,9 +139,9 @@ public class ComputerBlock extends BlockContainer
 		File mcpipyMcpiFile = new File(mcpipyPathString, "mcpi");
 		if (!mcpipyMcpiFile.exists()) {
 			if (world.isRemote) {
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"RaspberryJam Mod's mcpipy/mcpi is missing, replace or"));
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"reinstall!"));
 			}
 			return false;
@@ -144,9 +150,9 @@ public class ComputerBlock extends BlockContainer
 		File scriptFile = new File(scriptPathString);
 		if (!scriptFile.exists()) {
 			if (world.isRemote) {
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"The personal folder specified in PyCraft-Mod config menu"));
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"does not exist. Please specify the correct folder!"));
 			}
 			return false;
@@ -164,7 +170,7 @@ public class ComputerBlock extends BlockContainer
 				FileUtils.copyDirectory(mcpipyMcpiFile, mcpipyPycraftMcpiFile);
 			} catch (IOException e) {
 				if (world.isRemote) {
-					player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+					player.addChatMessage(new TextComponentString(TextFormatting.RED +
 							"Cannot copy mcpipy library files to mcpipy/pycraft/mcpi!"));
 				}
 				return false;
@@ -184,7 +190,7 @@ public class ComputerBlock extends BlockContainer
 			FileUtils.copyFile(mcFile, mcDestFile);
 		} catch (IOException e) {
 			if (world.isRemote) {
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"Cannot copy fonts, text, mc.py files to mcpipy/pycraft!"));
 			}
 			return false;
@@ -195,7 +201,7 @@ public class ComputerBlock extends BlockContainer
 			FileUtils.copyDirectory(scriptFile, mcpipyPycraftFile, fileFilter);
 		} catch (IOException e) {
 			if (world.isRemote) {
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
+				player.addChatMessage(new TextComponentString(TextFormatting.RED +
 						"Cannot copy personal scripts to mcpipy/pycraft!"));
 			}
 			return false;
@@ -207,7 +213,7 @@ public class ComputerBlock extends BlockContainer
 	// Called when the block is right clicked
 	// In this block it is used to open the blocks gui when right clicked by a player
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {		
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem,  EnumFacing side, float hitX, float hitY, float hitZ) {		
 		// Obtain the tile entity associated with the block using its position
 		// then cast to our custom TileEntityInventoryBasic
 		TileEntity te = worldIn.getTileEntity(pos);
@@ -290,35 +296,37 @@ public class ComputerBlock extends BlockContainer
 			super.breakBlock(worldIn, pos, state);
 		}
 	}
+	
+	//---------------------------------------------------------
 
-	// the block will render in the SOLID layer.  See http://greyminecraftcoder.blogspot.co.at/2014/12/block-rendering-18.html for more information.
-	@SideOnly(Side.CLIENT)
-	public EnumWorldBlockLayer getBlockLayer()
-	{
-		return EnumWorldBlockLayer.SOLID;
-	}
-
-	// used by the renderer to control lighting and visibility of other blocks.
-	// set to false because this block doesn't fill the entire 1x1x1 space
-	@Override
-	public boolean isOpaqueCube() {
-		return false;
-	}
-
-	// used by the renderer to control lighting and visibility of other blocks, also by
-	// (eg) wall or fence to control whether the fence joins itself to this block
-	// set to true because this block fills the entire 1x1x1 space
-	@Override
-	public boolean isFullCube() {
-		return true;
-	}
-
-	// render using a BakedModel
-	// not strictly required because the default (super method) is 3.
-	@Override
-	public int getRenderType() {
-		return 3;
-	}
+//	// the block will render in the SOLID layer.  See http://greyminecraftcoder.blogspot.co.at/2014/12/block-rendering-18.html for more information.
+//	@SideOnly(Side.CLIENT)
+//	public EnumWorldBlockLayer getBlockLayer()
+//	{
+//		return EnumWorldBlockLayer.SOLID;
+//	}
+//
+//	// used by the renderer to control lighting and visibility of other blocks.
+//	// set to false because this block doesn't fill the entire 1x1x1 space
+//	@Override
+//	public boolean isFullyOpaque() {
+//		return false;
+//	}
+//
+//	// used by the renderer to control lighting and visibility of other blocks, also by
+//	// (eg) wall or fence to control whether the fence joins itself to this block
+//	// set to true because this block fills the entire 1x1x1 space
+//	@Override
+//	public boolean isFullCube() {
+//		return true;
+//	}
+//
+//	// render using a BakedModel
+//	// not strictly required because the default (super method) is 3.
+//	@Override
+//	public int getRenderType() {
+//		return 3;
+//	}
 
 	//---------------------------------------------------------
 	// Make sure the block is rendered facing the player
@@ -326,9 +334,9 @@ public class ComputerBlock extends BlockContainer
 	public static final PropertyDirection PROPERTYFACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	@Override
-	protected BlockState createBlockState()
+	protected BlockStateContainer createBlockState()
 	{
-		return new BlockState(this, new IProperty[] {PROPERTYFACING});
+		return new BlockStateContainer(this, new IProperty[] {PROPERTYFACING});
 	}
 
 	@Override

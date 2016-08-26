@@ -30,8 +30,10 @@ public class StartupCommon
   public static void preInitCommon()
   {
     // each instance of your item should have a name that is unique within your mod.  use lower case.
-    scriptItem = (ScriptItem)(new ScriptItem().setUnlocalizedName("scriptItem"));
-    GameRegistry.registerItem(scriptItem , "scriptItem");
+    scriptItem = (ScriptItem) (new ScriptItem());
+    scriptItem.setRegistryName("scriptItem");
+    scriptItem.setUnlocalizedName(scriptItem.getRegistryName().toString());
+    GameRegistry.register(scriptItem);
   }
 
   public static void initCommon()

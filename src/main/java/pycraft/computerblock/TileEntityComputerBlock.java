@@ -1,16 +1,16 @@
 package pycraft.computerblock;
 
+import java.util.Arrays;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.IChatComponent;
-
-import java.util.Arrays;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 
 /**
  * ----------- PyCraft Mod -----------
@@ -173,8 +173,8 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 
 	// standard code to look up what the human-readable name is
 	@Override
-	public IChatComponent getDisplayName() {
-		return this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName());
+	public ITextComponent getDisplayName() {
+		return this.hasCustomName() ? new TextComponentString(this.getName()) : new TextComponentTranslation(this.getName());
 	}
 
 	// -----------------------------------------------------------------------------------------------------------
@@ -187,7 +187,7 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 	 * @return
 	 */
 	@Override
-	public ItemStack getStackInSlotOnClosing(int slotIndex) {
+	public ItemStack removeStackFromSlot(int slotIndex) {
 		ItemStack itemStack = getStackInSlot(slotIndex);
 		if (itemStack != null) setInventorySlotContents(slotIndex, null);
 		return itemStack;

@@ -1,9 +1,9 @@
-tile.computerBlock.name=Computer Block
+tile.pycraft:computerBlock.name=Computer Block
 container.computerBlock.name=Python Script Manager
-item.scriptItem.0.name=Python Script
-item.scriptItem.1.name=Housing Python Script
-item.scriptItem.2.name=Teleport Python Script
-item.scriptItem.3.name=Light Python Script
+item.pycraft:scriptItem.0.name=Python Script
+item.pycraft:scriptItem.1.name=Housing Python Script
+item.pycraft:scriptItem.2.name=Teleport Python Script
+item.pycraft:scriptItem.3.name=Light Python Script
 gui.configuration.mainTitle=PyCraft Mod Configuration
 gui.configuration.ctgy.general=Script Path Configuration
 gui.configuration.ctgy.general.tooltip=Configure your installation path to be able to use the mod!
