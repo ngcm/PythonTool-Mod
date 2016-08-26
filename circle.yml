@@ -19,8 +19,5 @@ deployment:
   release:
     branch: master
     commands:
-      - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-  testing:
-    branch: testing
-    commands:
-      - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_TESTING
+      - scp forge-18/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_18
+
