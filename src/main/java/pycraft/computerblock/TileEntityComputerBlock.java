@@ -162,7 +162,7 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 
 	// will add a key for this container to the lang file so we can name it in the GUI
 	@Override
-	public String getName() {
+	public String getCommandSenderName() {
 		return "container.computerBlock.name";
 	}
 
@@ -174,7 +174,7 @@ public class TileEntityComputerBlock extends TileEntity implements IInventory {
 	// standard code to look up what the human-readable name is
 	@Override
 	public IChatComponent getDisplayName() {
-		return this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName());
+		return this.hasCustomName() ? new ChatComponentText(this.getCommandSenderName()) : new ChatComponentTranslation(this.getCommandSenderName());
 	}
 
 	// -----------------------------------------------------------------------------------------------------------
