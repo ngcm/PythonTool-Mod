@@ -6,17 +6,17 @@ machine:
 
 dependencies:
   override:
-    - chmod u+x scripts/install-dependencies.sh
-    - ./scripts/install-dependencies.sh
-    - chmod +x scripts/build.sh
-    - ./scripts/build.sh
+    - chmod u+x gradlew
+    - ./gradlew setupDecompWorkspace
+    - ./gradlew build
    
 test:
   override:
     - echo "All done"
 
 deployment:
-  minecraft194:
+  minecraft18:
     branch: minecraft194
     commands:
-      - scp forge/build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_194
+      - scp build/libs/pycraft-???.jar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH_194
+
