@@ -1,4 +1,4 @@
-![Circle CI](https://circleci.com/gh/ngcm/PyCraft-Mod.svg?style=shield&circle-token=:circle-token) [![codebeat badge](https://codebeat.co/badges/334becab-8080-48b0-93a8-d050d850f73a)](https://codebeat.co/projects/github-com-ngcm-pycraft-mod)
+[![Circle CI](https://circleci.com/gh/ngcm/PyCraft-Mod.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/ngcm/PyCraft-Mod/tree/master) [![codebeat badge](https://codebeat.co/badges/334becab-8080-48b0-93a8-d050d850f73a)](https://codebeat.co/projects/github-com-ngcm-pycraft-mod)
 
 # :snake: PyCraft-Mod for Minecraft
 #### Interactively alter your Minecraft world in real time, using Python.
