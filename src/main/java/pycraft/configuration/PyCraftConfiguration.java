@@ -160,7 +160,7 @@ public class PyCraftConfiguration {
 		} else if(SystemUtils.IS_OS_MAC) {
 			SCRIPT_PATH_DEFAULT_VALUE = System.getProperty("user.home") + "/Library/Application Support/minecraft/mcpipy";
 		} else if(SystemUtils.IS_OS_UNIX) {
-			SCRIPT_PATH_DEFAULT_VALUE = System.getProperty("user.home") + "/Library/Application Support/minecraft/mcpipy";
+			SCRIPT_PATH_DEFAULT_VALUE = System.getProperty("user.home") + "/.minecraft/mcpipy";
 		} else {
 			SCRIPT_PATH_DEFAULT_VALUE = "Unkown OS, must set manually";
 		}
