@@ -1,0 +1,13 @@
+tile.pythontool:computerBlock.name=Computer Block
+container.computerBlock.name=Python Script Manager
+item.pythontool:scriptItem.0.name=Python Script
+item.pythontool:scriptItem.1.name=Housing Python Script
+item.pythontool:scriptItem.2.name=Teleport Python Script
+item.pythontool:scriptItem.3.name=Light Python Script
+gui.configuration.mainTitle=PythonTool Mod Configuration
+gui.configuration.ctgy.general=Script Path Configuration
+gui.configuration.ctgy.general.tooltip=Configure your installation path to be able to use the mod!
+gui.configuration.mcpipyPath=mcpipy folder
+gui.configuration.mcpipyPath.tooltip=Must be RaspberryJam Mod's mcpipy folder
+gui.configuration.scriptPath=Script folder
+gui.configuration.scriptPath.tooltip=Choose the folder you like to place your scripts
