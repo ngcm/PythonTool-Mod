@@ -22,7 +22,7 @@ plugins {
 */
 version = "0.8"
 group= "alvarop"
-archivesBaseName = "pycraft"
+archivesBaseName = "pythontool"
 
 minecraft {
     version = "1.8.8-11.15.0.1655"
