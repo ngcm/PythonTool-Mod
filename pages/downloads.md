@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Downloads
-permalink: /testtt/downloads/
+permalink: downloads/
 ---
 
 
