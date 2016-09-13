@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Installation
-permalink: /testtt/installation/
+permalink: installation/
 ---
 
 ## Quick installation guide

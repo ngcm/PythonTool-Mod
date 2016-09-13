@@ -1,7 +1,7 @@
 ---
 layout: page
 title: User guide
-permalink: /testtt/userguide/
+permalink: userguide/
 ---
 
 Just craft the Computer Block and place it in your world. It can also be found in the Miscellaneous creative tab.

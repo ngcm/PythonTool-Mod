@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Troubleshooting
-permalink: /testtt/troubleshooting/
+permalink: troubleshooting/
 ---
 
 ### Wait, what is a mod??
