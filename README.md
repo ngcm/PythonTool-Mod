@@ -72,8 +72,9 @@ There are many good sources to get started, plenty of [blogs](https://mcpipy.wor
 
 Get Minecraft running with Forge installed on it. Donwload both [RaspberryJam](https://github.com/arpruss/raspberryjammod/releases/latest) and [PyCraft mods](#downloads) for your favourite Minecraft version. Install them by placing the `.jar` mod files in your `minecraft/mods/**version**/` folder. RaspberryJam's `mcpipy` folder needs to be present in `minecraft/mcpipy` as well, it can be downloaded from the same [link](https://github.com/arpruss/raspberryjammod/releases/latest) under the name `python-sripts.zip`. Install [Python](https://www.python.org/downloads/) as well, both Python 2 or Python 3 will work.
 
-By 
-Create a folder called `pycraft` in your desktop and place your scripts there (dozens of examples can be found inside the `minecraft/mcpipy` folder you've just created). All the Python scripts present in this folder will be in the Computer Block from PyCraft. Note that this folder can be changed to any in your system in PyCraft's configuration menu, in Minecraft main menu.
+PythonTool Mod uses a personal folder of your choice to store your scripts. This folder can be changed to any in your system in PyCraft's configuration menu, in Minecraft main menu. By default it points to the `minecraft/mcpipy` folder you just downloaded, so that you can use the many examples that come there.
+
+To use your selection of scripts, create a folder called `pycraft` in your desktop and move your desired scripts there. Change the personal folder in PythonTool's settings menu. All the Python scripts present in this folder will be in the Computer Block from PyCraft.
 
 Have a look at the [user guide](#user-guide) and happy progamming!
 
