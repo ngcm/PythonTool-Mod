@@ -3,7 +3,7 @@ title: PythonTool Mod
 email: a.perez-diaz@soton.ac.uk
 description: > # this means to ignore newlines until "baseurl:"
   PythonTool Mod for Minecraft. Interactively alter your Minecraft world in real time, using Python.
-baseurl: "/testtt/" # the subpath of your site, e.g. /blog/
+baseurl: "/testtt" # the subpath of your site, e.g. /blog/
 url: "http://alvaropp.github.io" # the base hostname & protocol for your site
 github_username: alvaropp
 
