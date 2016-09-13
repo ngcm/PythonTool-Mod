@@ -76,7 +76,7 @@ PythonTool Mod uses a personal folder of your choice to store your scripts. This
 
 To use your selection of scripts, create a folder called `pycraft` in your desktop and move your desired scripts there. Change the personal folder in PythonTool's settings menu. All the Python scripts present in this folder will be in the Computer Block from PyCraft.
 
-Have a look at the [user guide](#user-guide) and happy progamming!
+Have a look at the [user guide](#user-guide) to learn everything about PythonTool Mod, and check the [How to create your own scripts guide](#how-to-create-your-own-scripts). Happy progamming!
 
 ---
 
