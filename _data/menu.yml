@@ -5,16 +5,16 @@
   href: "/testtt/installation/"
 
 - title: "User guide"
-  href: "{{ site.baseurl }}/userguide/"
+  href: "/testtt/userguide/"
 
 - title: "Start coding"
-  href: "{{ site.baseurl }}/startcoding/"
+  href: "/testtt/startcoding/"
 
 - title: "Troubleshooting"
-  href: "{{ site.baseurl }}/troubleshooting/"
+  href: "testtt/troubleshooting/"
   
 - title: "About"
-  href: "{{ site.baseurl }}/about/"
+  href: "testtt/about/"
 
 
   #- title: "Miscellany"
