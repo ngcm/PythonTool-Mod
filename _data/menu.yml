@@ -7,15 +7,14 @@
 - title: "User guide"
   href: "/testtt/userguide/"
 
-- title: "About"
-  href: "/testtt/about/"
-
 - title: "Start coding"
   href: "/testtt/startcoding/"
 
 - title: "Troubleshooting"
   href: "/testtt/troubleshooting/" 
 
+- title: "About"
+  href: "/testtt/about/"
 
   #- title: "Miscellany"
   # href: "/miscellany/"
