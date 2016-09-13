@@ -1,8 +1,8 @@
 - title: "Downloads"
-  href: "/downloads/"
+  href: "/testtt/downloads/"
 
 - title: "Installation"
-  href: "/installation/"
+  href: "/testtt/installation/"
 
 - title: "User guide"
   href: "{{ site.baseurl }}/userguide/"
