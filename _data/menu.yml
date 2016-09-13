@@ -1,20 +1,20 @@
 - title: "Downloads"
-  href: "/downloads/"
+  href: "{{ site.baseurl }}/downloads/"
 
 - title: "Installation"
-  href: "/installation/"
+  href: "{{ site.baseurl }}/installation/"
 
 - title: "User guide"
-  href: "/userguide/"
+  href: "{{ site.baseurl }}/userguide/"
 
 - title: "Start coding"
-  href: "/startcoding/"
+  href: "{{ site.baseurl }}/startcoding/"
 
 - title: "Troubleshooting"
-  href: "/troubleshooting/"
+  href: "{{ site.baseurl }}/troubleshooting/"
   
 - title: "About"
-  href: "/about/"
+  href: "{{ site.baseurl }}/about/"
 
 
   #- title: "Miscellany"
