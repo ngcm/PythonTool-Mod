@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: 
+permalink: /
 ---
 
 ![PyCraft-logo-large](/images/pythontool_logo.jpg)
