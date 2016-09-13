@@ -42,8 +42,8 @@ This [mod](#wait-what-is-a-mod) builds on top of [Raspberry Jam Mod](https://git
 
 Just craft the Computer Block and place it in your world. It can also be found in the Miscellaneous creative tab.
 
-![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/pycraft/media/recipe_cropped.png)
-![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/pycraft/media/computerblock_cropped.png)
+![ComputerBlock recipe](http://www.southampton.ac.uk/~apd1g15/media/recipe_cropped.png)
+![ComputerBlock](http://www.southampton.ac.uk/~apd1g15/media/computerblock_cropped.png)
 
 The Computer Block looks at a given folder in your system (select it in PyCraft's mod config menu) where you will place your scripts: [create your own] or get dozens freely available online! Right-click on the Computer Block, you will see all those scripts in your folder as Script Items in the game, you can move them to your inventory or hot bar.
 
