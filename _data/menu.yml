@@ -1,0 +1,26 @@
+- title: "Downloads"
+  href: "/downloads/"
+
+- title: "Installation"
+  href: "/installation/"
+
+- title: "User guide"
+  href: "/userguide/"
+
+- title: "Start coding"
+  href: "/startcoding/"
+
+- title: "Troubleshooting"
+  href: "/troubleshooting/"
+  
+- title: "About"
+  href: "/about/"
+
+
+  #- title: "Miscellany"
+  # href: "/miscellany/"
+  # subcategories:
+  # - subtitle: "Item 1"
+  #   subhref: "/miscellany/item-1/"
+  # - subtitle: "Item 2"
+  #   subhref: "/miscellany/item-2/"
