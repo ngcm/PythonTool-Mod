@@ -1,6 +1,6 @@
 ---
 layout: page
-title: User guide
+title: Start coding
 permalink: startcoding/
 ---
 
