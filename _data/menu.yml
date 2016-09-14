@@ -12,14 +12,3 @@
 
 - title: "Troubleshooting"
   href: "/testtt/troubleshooting/" 
-
-- title: "About"
-  href: "/testtt/about/"
-
-  #- title: "Miscellany"
-  # href: "/miscellany/"
-  # subcategories:
-  # - subtitle: "Item 1"
-  #   subhref: "/miscellany/item-1/"
-  # - subtitle: "Item 2"
-  #   subhref: "/miscellany/item-2/"
