@@ -5,6 +5,8 @@
 
 ![PythonTool-logo-large](http://www.southampton.ac.uk/~apd1g15/media/pythontool_logo_large.jpg)
 
+[Official website](https://ngcm.github.io/PythonTool-Mod/): installation instructions, user guide, troubleshooting, etc.
+
 Ever wanted to learn how to program? PythonTool Mod provides an interactive way to get started with Python programming inside your Minecraft adventures. Python is a very common and powerful -yet simple- programming language that can be used to modify your Minecraft worlds in real time. There are plenty of resources, have a look at the [How to create your own scripts](#how-to-create-your-own-scripts) section to learn more!
 
 Build arbitrary things, turn blocks into bombs or create interactive games, just with one click!
