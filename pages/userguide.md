@@ -9,7 +9,7 @@ Just craft the Computer Block and place it in your world. It can also be found i
 ![ComputerBlock recipe](/testtt/images/recipe.png)
 ![ComputerBlock](/testtt/images/computerblock.png)
 
-The Computer Block looks at a given folder in your system (select it in PyCraft's mod config menu) where you will place your scripts: [create your own](/startcoding/) or get dozens freely available online! Right-click on the Computer Block, you will see all those scripts in your folder as Script Items in the game, you can move them to your inventory or hot bar.
+The Computer Block looks at a given folder in your system (select it in PythonTool's mod config menu) where you will place your scripts: [create your own](/testtt/startcoding/) or get dozens freely available online! Right-click on the Computer Block, you will see all those scripts in your folder as Python Script Items in the game, you can move them to your inventory or hot bar.
 
 ![ComputerBlock inventory](/testtt/images/computer_inventory.png)
 ![House ScriptItem](/testtt/images/scriptItem_house.png)

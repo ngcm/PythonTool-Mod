@@ -6,11 +6,11 @@ permalink: installation/
 
 ## Quick installation guide
 
-Get Minecraft running with Forge installed on it. Donwload both [RaspberryJam](https://github.com/arpruss/raspberryjammod/releases/latest) and [PyCraft mods](/testtt/downloads/) for your favourite Minecraft version. Install them by placing the `.jar` mod files in your `minecraft/mods/**version**/` folder. RaspberryJam's `mcpipy` folder needs to be present in `minecraft/mcpipy` as well, it can be downloaded from the same [link](https://github.com/arpruss/raspberryjammod/releases/latest) under the name `python-sripts.zip`. Install [Python](https://www.python.org/downloads/) as well, both Python 2 or Python 3 will work.
+Get Minecraft running with Forge installed on it. Donwload both [RaspberryJam](https://github.com/arpruss/raspberryjammod/releases/latest) and [PythonTool mods](/testtt/downloads/) for your favourite Minecraft version. Install them by placing the `.jar` mod files in your `minecraft/mods/**version**/` folder. RaspberryJam's `mcpipy` folder needs to be present in `minecraft/mcpipy` as well, it can be downloaded from the same [link](https://github.com/arpruss/raspberryjammod/releases/latest) under the name `python-sripts.zip`. Install [Python](https://www.python.org/downloads/) as well, both Python 2 or Python 3 will work.
 
-PythonTool Mod uses a personal folder of your choice to store your scripts. This folder can be changed to any in your system in PyCraft's configuration menu, in Minecraft main menu. By default it points to the `minecraft/mcpipy` folder you just downloaded, so that you can use the many examples that come there.
+PythonTool Mod uses a personal folder of your choice to store your scripts. This folder can be changed to any in your system in PythonTool's configuration menu, in Minecraft main menu. By default it points to the `minecraft/mcpipy` folder you just downloaded, so that you can use the many examples that come there.
 
-To use your selection of scripts, create a folder called `pycraft` in your desktop and move your desired scripts there. Change the personal folder in PythonTool's settings menu. All the Python scripts present in this folder will be in the Computer Block from PyCraft.
+To use your selection of scripts, create a folder called `pythontool` in your desktop and move your desired scripts there. Change the personal folder in PythonTool's settings menu. All the Python scripts present in this folder will be in the Computer Block from PythonTool.
 
 Have a look at the [user guide](/testtt/userguide/) to learn everything about PythonTool Mod, and check the [start coding guide](/testtt/startcoding/) to learn about how to make your own scripts. Happy programming!
 
@@ -67,14 +67,14 @@ So the only thing we need to do is to make sure PythonTool knows which folder yo
    * `Script folder`: this is your custom folder, type the address of your custom folder. For our pythontool folder in Desktop, if you are using Windows, it will look like this: `Users\**yourUserName**\Desktop\pythontool`.
 3. Everything should be ready now, click on `Done` a few times to go back to the main screen, and start your world. Enjoy!
 
-### Configure PyCraft!
+### Configure PythonTool!
 
-In this last tiny step, we will quickly configure PyCraft. The way it works is, you specify a folder of your choice, and place your scripts there, then when you open the Computer Block in your Minecraft world, all those scripts will appear there as Python Script items, which you can carry and use whenever you want!
+In this last tiny step, we will quickly configure PythonTool. The way it works is, you specify a folder of your choice, and place your scripts there, then when you open the Computer Block in your Minecraft world, all those scripts will appear there as Python Script items, which you can carry and use whenever you want!
 
-So the only thing we need to do is to make sure PyCraft knows which folder you wish to use. By default it points to a folder in your installation path full of example scripts (so many that they don't fit all in the Computer Block). If you want to have a look at those, great! But at some point you'll want to create your own, or to make a selection. Just follow this steps:
+So the only thing we need to do is to make sure PythonTool knows which folder you wish to use. By default it points to a folder in your installation path full of example scripts (so many that they don't fit all in the Computer Block). If you want to have a look at those, great! But at some point you'll want to create your own, or to make a selection. Just follow this steps:
 
-Create our custom folder called maybe pycraft, in Desktop (for example)
-Open Minecraft, and in the main screen go to Mods, select PyCraft Mod, and click on Config. This is the configuration menu, click on Script Path Configuration. Here there are two configuration fields:
+Create our custom folder called maybe pythontool, in Desktop (for example)
+Open Minecraft, and in the main screen go to Mods, select PythonTool Mod, and click on Config. This is the configuration menu, click on Script Path Configuration. Here there are two configuration fields:
 mcpipy folder: this points to RaspberryJam Mod's folder in your Minecraft installation path. If you have installed everything in the default directories, it is already pointing to the right place.
-Script folder: this is your custom folder, type the address of your custom folder. For our pycraft folder in Desktop, if you are using Windows, it will look like this: Users\**yourUserName**\Desktop\pycraft.
+Script folder: this is your custom folder, type the address of your custom folder. For our pythontool folder in Desktop, if you are using Windows, it will look like this: Users\**yourUserName**\Desktop\pythontool.
 Everything should be ready now, clik on Done a few times to go back to the main screen, and start your world. Enjoy!
