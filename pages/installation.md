@@ -6,13 +6,13 @@ permalink: installation/
 
 ## Quick installation guide
 
-Get Minecraft running with Forge installed on it. Donwload both [RaspberryJam](https://github.com/arpruss/raspberryjammod/releases/latest) and [PyCraft mods](/downloads/) for your favourite Minecraft version. Install them by placing the `.jar` mod files in your `minecraft/mods/**version**/` folder. RaspberryJam's `mcpipy` folder needs to be present in `minecraft/mcpipy` as well, it can be downloaded from the same [link](https://github.com/arpruss/raspberryjammod/releases/latest) under the name `python-sripts.zip`. Install [Python](https://www.python.org/downloads/) as well, both Python 2 or Python 3 will work.
+Get Minecraft running with Forge installed on it. Donwload both [RaspberryJam](https://github.com/arpruss/raspberryjammod/releases/latest) and [PyCraft mods](/testtt/downloads/) for your favourite Minecraft version. Install them by placing the `.jar` mod files in your `minecraft/mods/**version**/` folder. RaspberryJam's `mcpipy` folder needs to be present in `minecraft/mcpipy` as well, it can be downloaded from the same [link](https://github.com/arpruss/raspberryjammod/releases/latest) under the name `python-sripts.zip`. Install [Python](https://www.python.org/downloads/) as well, both Python 2 or Python 3 will work.
 
 PythonTool Mod uses a personal folder of your choice to store your scripts. This folder can be changed to any in your system in PyCraft's configuration menu, in Minecraft main menu. By default it points to the `minecraft/mcpipy` folder you just downloaded, so that you can use the many examples that come there.
 
 To use your selection of scripts, create a folder called `pycraft` in your desktop and move your desired scripts there. Change the personal folder in PythonTool's settings menu. All the Python scripts present in this folder will be in the Computer Block from PyCraft.
 
-Have a look at the [user guide](/userguide/) to learn everything about PythonTool Mod, and check the [start coding guide](/startcoding/) to learn about how to make your own scripts. Happy programming!
+Have a look at the [user guide](/testtt/userguide/) to learn everything about PythonTool Mod, and check the [start coding guide](/testtt/startcoding/) to learn about how to make your own scripts. Happy programming!
 
 ---
 
@@ -32,7 +32,7 @@ Have a look at the [user guide](/userguide/) to learn everything about PythonToo
 
 ### Download and install Forge
 
-1. Choose the appropriate version of Forge in the [Downloads](/downloads/) section just above, click on the link and you'll be taken to the official Forge website. You want to download the *recommended* installer (Mac/Linux) or installer-win (Windows).
+1. Choose the appropriate version of Forge in the [Downloads](/testtt/downloads/) section just above, click on the link and you'll be taken to the official Forge website. You want to download the *recommended* installer (Mac/Linux) or installer-win (Windows).
 2. Install Forge: open the file you've just downloaded and select *Install client* and the Minecraft installation path: if you used the default one, just click *OK*, if you changed it, point the installer to your custom installation path.
 3. Open Minecraft, click on *Profile*, now there should be a new user apart from your user name, select *forge*. On the right hand side it should say *Ready to update & play Minecraft 1.8-forge...*. If it doesn't, repeat step 5, and select the option at the bottom of the *Use version:* list. When it's ready, click *Play*.
 4. You should see a slightly different Minecraft main menu, there should be some info on the bottom-left, and a new *Mods* button. Great, you're nearly there! Close Minecraft.
@@ -48,7 +48,7 @@ Have a look at the [user guide](/userguide/) to learn everything about PythonToo
 
 ### Install PythonTool!
 
-1. Download PythonTool from the [download section](/downloads/) above, remember to choose the right version!
+1. Download PythonTool from the [download section](/testtt/downloads/) above, remember to choose the right version!
 2. Move this file to Forge's mods folder, which is located in your Minecraft installation folder, select the appropriate version folder inside `mods` folder. Default installation paths are:
     * Windows: `Users\**yourUserName**\AppData\Roaming\.minecraft\mods`
     * Mac OS: `~/Library/Application Support/minecraft/mods`
