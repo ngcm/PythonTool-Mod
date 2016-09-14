@@ -6,8 +6,8 @@ permalink: userguide/
 
 Just craft the Computer Block and place it in your world. It can also be found in the Miscellaneous creative tab.
 
-![ComputerBlock recipe](/images/recipe.png)
-![ComputerBlock](/images/computerblock.png)
+![ComputerBlock recipe](/testtt/images/recipe.png)
+![ComputerBlock](testtt/images/computerblock.png)
 
 The Computer Block looks at a given folder in your system (select it in PyCraft's mod config menu) where you will place your scripts: [create your own] or get dozens freely available online! Right-click on the Computer Block, you will see all those scripts in your folder as Script Items in the game, you can move them to your inventory or hot bar.
 
