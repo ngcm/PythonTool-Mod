@@ -5,7 +5,7 @@ permalink: downloads/
 ---
 
 
-![PyCraft-logo-large](/images/pythontool_logo.jpg)
+![PyCraft-logo-large](/testtt/images/pythontool_logo.jpg)
 
 
 | Minecraft version |       |         |

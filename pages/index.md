@@ -4,7 +4,7 @@ title: About
 permalink: /
 ---
 
-![PyCraft-logo-large](testtt/images/pythontool_logo.jpg)
+![PyCraft-logo-large](/testtt/images/pythontool_logo.jpg)
 
 THIS IS A TEST
 
