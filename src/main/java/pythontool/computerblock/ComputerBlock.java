@@ -183,14 +183,17 @@ public class ComputerBlock extends Block
 			File textFile = new File(mcpipyFile, "text.py");
 			File mcFile = new File(mcpipyFile, "mc.py");
 			File mineFile = new File(mcpipyFile, "mine.py");
+			File vehicleFile = new File(mcpipyFile, "vehicle.py");
 			File fontsDestFile = new File(mcpipyPythonToolFile, "fonts.py");
 			File textDestFile = new File(mcpipyPythonToolFile, "text.py");
 			File mcDestFile = new File(mcpipyPythonToolFile, "mc.py");
 			File mineDestFile = new File(mcpipyPythonToolFile, "mine.py");
+			File vehicleDestFile = new File(mcpipyPythonToolFile, "vehicle.py");
 			FileUtils.copyFile(fontsFile, fontsDestFile);
 			FileUtils.copyFile(textFile, textDestFile);
 			FileUtils.copyFile(mcFile, mcDestFile);
 			FileUtils.copyFile(mineFile, mineDestFile);
+			FileUtils.copyFile(vehicleFile, vehicleDestFile);
 		} catch (IOException e) {
 			if (world.isRemote) {
 				player.addChatMessage(new TextComponentString(TextFormatting.RED +
