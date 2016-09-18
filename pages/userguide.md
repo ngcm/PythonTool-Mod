@@ -4,7 +4,7 @@ title: User guide
 permalink: userguide/
 ---
 
-Just craft the Computer Block and place it in your world. It can also be found in the Miscellaneous creative tab.
+Just craft the Computer Block and place it in your world. The recipe takes 8 Cobblestone blocks and 1 Glass block arranged as shown in the picture. It can also be found in the Miscellaneous creative tab if in creative mode.
 
 ![ComputerBlock recipe](/PythonTool-Mod/images/recipe.png)
 ![ComputerBlock](/PythonTool-Mod/images/computerblock.png)
