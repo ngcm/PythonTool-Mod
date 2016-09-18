@@ -176,22 +176,25 @@ public class ComputerBlock extends Block
 				return false;
 			}
 		}
-		// Copy auxiliary scripts fonts.py, text.py, mc.py to mcpipy/pythontool be able
+		// Copy auxiliary scripts mine.py, fonts.py, text.py, mc.py to mcpipy/pythontool be able
 		// to execute RaspberryJam Mod's example scripts
 		try {
 			File fontsFile = new File(mcpipyFile, "fonts.py");
 			File textFile = new File(mcpipyFile, "text.py");
 			File mcFile = new File(mcpipyFile, "mc.py");
+			File mineFile = new File(mcpipyFile, "mine.py");
 			File fontsDestFile = new File(mcpipyPythonToolFile, "fonts.py");
 			File textDestFile = new File(mcpipyPythonToolFile, "text.py");
 			File mcDestFile = new File(mcpipyPythonToolFile, "mc.py");
+			File mineDestFile = new File(mcpipyPythonToolFile, "mine.py");
 			FileUtils.copyFile(fontsFile, fontsDestFile);
 			FileUtils.copyFile(textFile, textDestFile);
 			FileUtils.copyFile(mcFile, mcDestFile);
+			FileUtils.copyFile(mineFile, mineDestFile);
 		} catch (IOException e) {
 			if (world.isRemote) {
 				player.addChatMessage(new TextComponentString(TextFormatting.RED +
-						"Cannot copy fonts, text, mc.py files to mcpipy/pythontool!"));
+						"Cannot copy mine, fonts, text, mc.py files to mcpipy/pythontool!"));
 			}
 			return false;
 		}
