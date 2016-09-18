@@ -187,7 +187,7 @@ public class ComputerBlock extends BlockContainer
 			FileUtils.copyFile(textFile, textDestFile);
 			FileUtils.copyFile(mcFile, mcDestFile);
 			FileUtils.copyFile(mineFile, mineDestFile);
-
+			FileUtils.copyFile(vehicleFile, vehicleDestFile);
 		} catch (IOException e) {
 			if (world.isRemote) {
 				player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +
