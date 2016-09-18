@@ -51,8 +51,8 @@ public class StartupCommon
 				"RRR",
 				"RGR",
 				"RRR",
-				'G', Blocks.glass_pane,
-				'R', Blocks.bedrock
+				'G', Blocks.glass,
+				'R', Blocks.cobblestone
 		});	
 	}
 
