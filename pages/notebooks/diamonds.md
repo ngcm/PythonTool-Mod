@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Turn blocks into diamonds
+title: Turn blocks into diamond
 permalink: startcoding/diamonds/
 ---
 
@@ -11788,7 +11788,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Turn-blocks-into-diamods">Turn blocks into diamods<a class="anchor-link" href="#Turn-blocks-into-diamods">&#182;</a></h1><p>After completing the <strong>Hello world!</strong> example which introduces the very basics, we're going to look at a more advanced example which will turn existing blocks in the world into Diamond blocks.</p>
+<h1 id="Turn-blocks-into-diamond">Turn blocks into diamond<a class="anchor-link" href="#Turn-blocks-into-diamond">&#182;</a></h1><p>After completing the <strong>Hello world!</strong> example which introduces the very basics, we're going to look at a more advanced example which will turn existing blocks in the world into Diamond blocks.</p>
 <p>To connect and interact with Minecraft we will use the <strong>mcpi</strong> library, so make use the <code>mcpi</code> folder you downloaded from RaspberryJam Mod's website is present in the same directory as this notebook. As an example, let's say you have the following folders:</p>
 <ul>
 <li>Desktop<ul>
