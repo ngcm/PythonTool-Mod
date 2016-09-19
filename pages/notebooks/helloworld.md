@@ -11794,7 +11794,7 @@ div#notebook {
 <li>Desktop<ul>
 <li>My Scripts<ul>
 <li>mcpi</li>
-<li>Hello_world.ipynb</li>
+<li>Hello_world.ipynb  <---- this notebook!</li>
 </ul>
 </li>
 </ul>
