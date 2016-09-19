@@ -6,7 +6,7 @@ permalink: startcoding/
 
 ## How to create your own scripts
 
-By default, PyCraft uses the example scripts that come with RaspberryJam Mod. There are several dozens, created by many different people who have made them freely available online. You are very welcome to use them, look at them, and once you feel confident, modify them as you like!
+By default, PyCraft uses the example scripts that come with RaspberryJam Mod. There are several dozens, created by many different people who have made them freely available online. You are very welcome to look, use and modify them as you like!
 
 All the Python scripts which interact with Minecraft use a collection of other Python scripts called [mcpipy](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html), which handles all the difficult stuff, like connecting to your world and moving things around as you wish, you just have to tell it what you want.
 
