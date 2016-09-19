@@ -9,6 +9,16 @@
 
 - title: "Start coding"
   href: "/PythonTool-Mod/startcoding/"
+  subcategories:
+    - subtitle: "Hello world!"
+      subhref: "/PythonTool-Mod/startcoding/helloworld/"
+    - subtitle: "Convert blocks into diamond"
+      subhref: "/PythonTool-Mod/startcoding/diamond/"
+    - subtitle: "Build a house"
+      subhref: "/PythonTool-Mod/startcoding/house/"
+    - subtitle: "Create a magic bridge"
+      subhref: "/PythonTool-Mod/startcoding/magicbridge"
 
 - title: "Troubleshooting"
   href: "/PythonTool-Mod/troubleshooting/" 
+
