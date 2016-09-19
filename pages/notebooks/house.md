@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Hello world!
-permalink: startcoding/helloworld/
+title: Build a house
+permalink: startcoding/house/
 ---
+
 
 
 <html>
 <head><meta charset="utf-8" />
-<title>Hello_world</title>
+<title>House</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11754,7 +11755,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Some commands for better formatting in the website, no need to look at this</span>
@@ -11788,13 +11789,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Hello-world-example">Hello world example<a class="anchor-link" href="#Hello-world-example">&#182;</a></h1><p>To get started with Python and Minecraft, let's create a code which will print <strong>Hello world!</strong> to the chat window.</p>
+<h1 id="Build-a-house">Build a house<a class="anchor-link" href="#Build-a-house">&#182;</a></h1><p>After completing the <strong>Hello world!</strong> and <strong>Turn blocks into diamond</strong> examples which introduce the basics, such as printing to the chat window and interacting with the blocks in your Minecraft world, we're going to look at a more advanced example which will build a house with one click. No need to collect materials and place the blocks one by one, just one click to <strong>instantly build a house!</strong></p>
 <p>To connect and interact with Minecraft we will use the <strong>mcpi</strong> library, so make use the <code>mcpi</code> folder you downloaded from RaspberryJam Mod's website is present in the same directory as this notebook. As an example, let's say you have the following folders:</p>
 <ul>
 <li>Desktop<ul>
 <li>My Scripts<ul>
 <li>mcpi</li>
-<li>Hello_world.ipynb &lt;---- this notebook!</li>
+<li>House.ipynb  &lt;---- this notebook!</li>
 </ul>
 </li>
 </ul>
@@ -11829,7 +11830,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mcpi.minecraft</span> <span class="k">as</span> <span class="nn">minecraft</span>
@@ -11863,7 +11864,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span> <span class="o">=</span> <span class="n">minecraft</span><span class="o">.</span><span class="n">Minecraft</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
@@ -11889,16 +11890,74 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-Post-&quot;Hello-world!&quot;-to-the-chat-window!">4. Post "Hello world!" to the chat window!<a class="anchor-link" href="#4.-Post-&quot;Hello-world!&quot;-to-the-chat-window!">&#182;</a></h3>
+<h3 id="4.-Find-your-player's-position-in-the-world">4. Find your player's position in the world<a class="anchor-link" href="#4.-Find-your-player's-position-in-the-world">&#182;</a></h3><p>We will obtain the player's coordinates:</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">postToChat</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">position</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">getPos</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Vec3(-107.98040609328149,7.0,-64.21412869371363)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So my player is standing at position</p>
+<ul>
+<li>x = -21.521329516654646</li>
+<li>y = 6.0</li>
+<li>z = 41.48384559579614</li>
+</ul>
+<p>Your coordinates will vary, as your player is standing in a different place in a completely different world!</p>
+<p>The purpose of obtaining the player's position is to be able to build the house nearby, say a few blocks away.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="5.-Create-an-empty-room-out-of-cobblestone">5. Create an empty room out of cobblestone<a class="anchor-link" href="#5.-Create-an-empty-room-out-of-cobblestone">&#182;</a></h3><p>Just shift the player's coordinates a few blocks in the <code>x</code> and <code>z</code> directions. <code>y</code> direction is left untouched as it controls the height, and we want the house to be standing in the same ground as the player.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housePosition</span> <span class="o">=</span> <span class="n">position</span>
+<span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span>
 </pre></div>
 
 </div>
@@ -11911,7 +11970,116 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You should see <strong>Hello world!</strong> in your Minecraft chat window. Congratulations, you've created your first script!</p>
+<p>A clever trick to build an empty room is the following: create a solid cube of Cobblestone (for example) of dimensions 7x7x7</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlocks</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span>
+             <span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span>
+             <span class="n">block</span><span class="o">.</span><span class="n">COBBLESTONE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/house1.png" alt="Cobblestone cube"></p>
+<p>and then create a solid cube of Air inside the previous Cobblestone cube, 2 blocks smaller per side!</p>
+<p>In this case a 6x6x6 cube. Be careful with the coordinates!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlocks</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span>    <span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+             <span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span>
+             <span class="n">block</span><span class="o">.</span><span class="n">AIR</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="6.-The-house-could-do-with-some-windows,-and-a-doorway!">6. The house could do with some windows, and a doorway!<a class="anchor-link" href="#6.-The-house-could-do-with-some-windows,-and-a-doorway!">&#182;</a></h3><p>Have a look at the following picture which contains the schematic dimensions of the house:</p>
+<p><strong>TODO</strong></p>
+<p>The windows will just be blocks of glass:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/house2.png" alt="House with windows"></p>
+<p>And for the doorway, we just need to place a couple of Air blocks in the middle of the wall</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">0</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">AIR</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">AIR</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/house3.png" alt="House with windows and a door"></p>
 
 </div>
 </div>
@@ -11921,7 +12089,109 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/hello.png" alt="Hello world!"></p>
+<h3 id="7.-More-improvements!">7. More improvements!<a class="anchor-link" href="#7.-More-improvements!">&#182;</a></h3><p>The house is pretty dark, as there are only a couple of windows. We can add as many as we want!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Another side of the house</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+
+<span class="c1"># Another side of the house</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+
+<span class="c1"># Very large windows on the last side!</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/house4.png" alt="House with windows and a door">
+<img src="images/house5.png" alt="House with windows and a door"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It would be nice to fill the empty house with usefull stuff, like some torches, a chest and a crafting table!</p>
+<p>This can be accomplished using the same command <code>setBlock</code>, and specifying the desired position for each of them inside the house:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First one torch at each corner</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">TORCH</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">TORCH</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">TORCH</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">TORCH</span><span class="p">)</span>
+
+<span class="c1"># A chest and a crafting table</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">CRAFTING_TABLE</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">CHEST</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/house6.png" alt="House with windows and a door"></p>
 
 </div>
 </div>
