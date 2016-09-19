@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello world!
-permalink: startcoding/helloworld/
+title: Turn blocks into diamonds
+permalink: startcoding/diamonds/
 ---
 
 
