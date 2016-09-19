@@ -5,8 +5,6 @@ permalink: startcoding/helloworld/
 ---
 
 
-
-<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 <title>Hello_world</title>
@@ -11759,7 +11757,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Some commands for better formatting in the website, no need to look at this</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
 <span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:100% !important; }&lt;/style&gt;&quot;</span><span class="p">))</span>
 </pre></div>
