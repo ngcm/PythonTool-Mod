@@ -1,0 +1,18 @@
+machine:
+  timezone:
+    Europe/London
+
+dependencies:
+  override:
+    - echo "All good"
+   
+test:
+  override:
+    - echo "All done"
+
+deployment:
+  release:
+    branch: master
+    commands:
+      - echo "All deployed"
+
