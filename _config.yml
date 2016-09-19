@@ -6,6 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/PythonTool-Mod/" # the subpath of your site, e.g. /blog/
 url: "http://ngcm.github.io" # the base hostname & protocol for your site
 github_username: alvaropp
+timezone: utc
 
 # Build settings
 markdown: kramdown
