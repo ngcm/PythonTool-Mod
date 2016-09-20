@@ -15,8 +15,9 @@ There are many good sources to get started, plenty of [blogs](https://mcpipy.wor
 In this section we propose you use the [Jupyter Notebook](http://jupyter.org/) to write your Python programs. Once installed, it opens in your browser, and let's you do all your programming there, allowing you to write and execute small pieces of your code whenever you want!
 
 We provide three examples to help you get started:
-* [**Hello world!**](startcoding/helloworld/)
 
-* [**Convert blocks into diamond**](startcoding/diamonds/)
+* [**Hello world!**](helloworld/)
 
-* [**Build a house](startcoding/house/)
+* [**Convert blocks into diamond**](diamonds/)
+
+* [**Build a house**](house/)
