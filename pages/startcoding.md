@@ -8,6 +8,15 @@ permalink: startcoding/
 
 By default, PyCraft uses the example scripts that come with RaspberryJam Mod. There are several dozens, created by many different people who have made them freely available online. You are very welcome to look, use and modify them as you like!
 
-All the Python scripts which interact with Minecraft use a collection of other Python scripts called [mcpipy](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html), which handles all the difficult stuff, like connecting to your world and moving things around as you wish, you just have to tell it what you want.
+All the Python scripts which interact with Minecraft use a collection of other Python scripts called [mcpi](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html), which handles all the difficult stuff, like connecting to your world and moving things around as you wish, you just have to tell it what you want.
 
 There are many good sources to get started, plenty of [blogs](https://mcpipy.wordpress.com/) and [tutorials](http://www.instructables.com/id/Python-coding-for-Minecraft/) online. A really good self-contained guide detailing everything from setting up your computer to creating interactive games, is the book [Adventures in Minecraft](http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html) by Martin O'Hanlon.
+
+In this section we propose you use the [Jupyter Notebook](http://jupyter.org/) to write your Python programs. Once installed, it opens in your browser, and let's you do all your programming there, allowing you to write and execute small pieces of your code whenever you want!
+
+We provide three examples to help you get started:
+* [**Hello world!**](startcoding/helloworld/)
+
+* [**Convert blocks into diamond**](startcoding/diamonds/)
+
+* [**Build a house](startcoding/house/)
