@@ -11913,7 +11913,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Vec3(-21.626334681672915,8.50494823586493,41.76705753706466)
+<pre>Vec3(-96.39792077711516,7.0,-63.126090997433664)
 </pre>
 </div>
 </div>
@@ -11967,7 +11967,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Vec3(-21.626334681672915,7.50494823586493,41.76705753706466)
+<pre>Vec3(-96.39792077711516,6.0,-63.126090997433664)
 </pre>
 </div>
 </div>
@@ -12015,8 +12015,8 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/grass.png" alt="Empty ground">
-<img src="images/diamond.png" alt="Diamond ground"></p>
+<p><img src="/PythonTool-Mod/images/grass.png" alt="Empty ground">
+<img src="/PythonTool-Mod/images/diamond.png" alt="Diamond ground"></p>
 
 </div>
 </div>
@@ -12034,7 +12034,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">position</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">getPos</span><span class="p">()</span>
@@ -12057,7 +12057,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">DIAMOND_BLOCK</span><span class="p">)</span>
@@ -12081,7 +12081,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/diamond_floor.png" alt="Diamond floor"></p>
+<p><img src="/PythonTool-Mod/images/diamond_floor.png" alt="Diamond floor"></p>
 
 </div>
 </div>

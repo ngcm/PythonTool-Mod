@@ -11921,7 +11921,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/hello.png" alt="Hello world!"></p>
+<p><img src="/PythonTool-Mod/images/hello.png" alt="Hello world!"></p>
 
 </div>
 </div>

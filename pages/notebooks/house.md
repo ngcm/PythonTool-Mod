@@ -5,7 +5,6 @@ permalink: startcoding/house/
 ---
 
 
-
 <html>
 <head><meta charset="utf-8" />
 <title>House</title>
@@ -11755,7 +11754,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Some commands for better formatting in the website, no need to look at this</span>
@@ -11830,7 +11829,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mcpi.minecraft</span> <span class="k">as</span> <span class="nn">minecraft</span>
@@ -11864,7 +11863,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span> <span class="o">=</span> <span class="n">minecraft</span><span class="o">.</span><span class="n">Minecraft</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
@@ -11897,7 +11896,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">position</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">getPos</span><span class="p">()</span>
@@ -11914,7 +11913,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Vec3(-107.98040609328149,7.0,-64.21412869371363)
+<pre>Vec3(-99.69999998807907,7.0,-58.717695744953176)
 </pre>
 </div>
 </div>
@@ -11952,7 +11951,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">housePosition</span> <span class="o">=</span> <span class="n">position</span>
@@ -11977,7 +11976,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlocks</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span>
@@ -11995,7 +11994,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/house1.png" alt="Cobblestone cube"></p>
+<p><img src="/PythonTool-Mod/images/house1.png" alt="Cobblestone cube"></p>
 <p>and then create a solid cube of Air inside the previous Cobblestone cube, 2 blocks smaller per side!</p>
 <p>In this case a 6x6x6 cube. Be careful with the coordinates!</p>
 
@@ -12004,7 +12003,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlocks</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span>    <span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
@@ -12031,7 +12030,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">GLASS</span><span class="p">)</span>
@@ -12054,7 +12053,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/house2.png" alt="House with windows"></p>
+<p><img src="/PythonTool-Mod/images/house2.png" alt="House with windows"></p>
 <p>And for the doorway, we just need to place a couple of Air blocks in the middle of the wall</p>
 
 </div>
@@ -12062,7 +12061,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="n">housePosition</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">0</span><span class="p">,</span> <span class="n">housePosition</span><span class="o">.</span><span class="n">z</span> <span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">AIR</span><span class="p">)</span>
@@ -12079,7 +12078,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/house3.png" alt="House with windows and a door"></p>
+<p><img src="/PythonTool-Mod/images/house3.png" alt="House with windows and a door"></p>
 
 </div>
 </div>
@@ -12096,7 +12095,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Another side of the house</span>
@@ -12148,8 +12147,8 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/house4.png" alt="House with windows and a door">
-<img src="images/house5.png" alt="House with windows and a door"></p>
+<p><img src="/PythonTool-Mod/images/house4.png" alt="House with windows and a door">
+<img src="/PythonTool-Mod/images/house5.png" alt="House with windows and a door"></p>
 
 </div>
 </div>
@@ -12167,7 +12166,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First one torch at each corner</span>
@@ -12191,7 +12190,7 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/house6.png" alt="House with windows and a door"></p>
+<p><img src="/PythonTool-Mod/images/house6.png" alt="House with windows and a door"></p>
 
 </div>
 </div>
