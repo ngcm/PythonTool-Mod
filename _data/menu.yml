@@ -16,8 +16,6 @@
       subhref: "/PythonTool-Mod/startcoding/diamonds/"
     - subtitle: "Build a house"
       subhref: "/PythonTool-Mod/startcoding/house/"
-    - subtitle: "Create a magic bridge"
-      subhref: "/PythonTool-Mod/startcoding/magicbridge"
 
 - title: "Troubleshooting"
   href: "/PythonTool-Mod/troubleshooting/" 
