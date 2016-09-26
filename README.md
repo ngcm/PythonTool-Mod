@@ -18,6 +18,6 @@ Ever wanted to learn how to program? PythonTool Mod provides an interactive way 
 Build arbitrary things, turn blocks into bombs or create interactive games, just with one click!
 This [mod](#wait-what-is-a-mod) builds on top of [Raspberry Jam Mod](https://github.com/arpruss/raspberryjammod) and provides a visual interface to use in-game Python scripts. Write your own scripts or get plenty of examples online, and use them inside the game with the mighty Computer Block and Python Script items. Have a look at the possibilities PythonTool Mod offers in the following video.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=mghcv0qJNv8
+<a href="http://www.youtube.com/watch?v=mghcv0qJNv8
 " target="_blank"><img src="http://img.youtube.com/vi/mghcv0qJNv8/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
