@@ -37,6 +37,10 @@ Have a look at the [user guide](/PythonTool-Mod/userguide/) to learn everything 
 3. Open Minecraft, click on *Profile*, now there should be a new user apart from your user name, select *forge*. On the right hand side it should say *Ready to update & play Minecraft 1.8-forge...*. If it doesn't, repeat step 5, and select the option at the bottom of the *Use version:* list. When it's ready, click *Play*.
 4. You should see a slightly different Minecraft main menu, there should be some info on the bottom-left, and a new *Mods* button. Great, you're nearly there! Close Minecraft.
 
+### Install Python
+
+Linux and Mac come with Python installed by default, so you don't need to do anything. On Windows, Python can be easily downloaded and installed from [here](https://www.python.org/downloads/). Maybe the easier option is to use RaspberryJam's full installer which will install the mod and Python, see next step.
+
 ### Install RaspberryJam Mod
 
 1. Visit [RaspberryJam's website] (https://github.com/arpruss/raspberryjammod/releases/latest)
@@ -66,15 +70,3 @@ So the only thing we need to do is to make sure PythonTool knows which folder yo
    * `mcpipy folder`: this points to RaspberryJam Mod's folder in your Minecraft installation path. If you have installed everything in the default directories, it is already pointing to the right place.
    * `Script folder`: this is your custom folder, type the address of your custom folder. For our pythontool folder in Desktop, if you are using Windows, it will look like this: `Users\**yourUserName**\Desktop\pythontool`.
 3. Everything should be ready now, click on `Done` a few times to go back to the main screen, and start your world. Enjoy!
-
-### Configure PythonTool!
-
-In this last tiny step, we will quickly configure PythonTool. The way it works is, you specify a folder of your choice, and place your scripts there, then when you open the Computer Block in your Minecraft world, all those scripts will appear there as Python Script items, which you can carry and use whenever you want!
-
-So the only thing we need to do is to make sure PythonTool knows which folder you wish to use. By default it points to a folder in your installation path full of example scripts (so many that they don't fit all in the Computer Block). If you want to have a look at those, great! But at some point you'll want to create your own, or to make a selection. Just follow this steps:
-
-Create our custom folder called maybe pythontool, in Desktop (for example)
-Open Minecraft, and in the main screen go to Mods, select PythonTool Mod, and click on Config. This is the configuration menu, click on Script Path Configuration. Here there are two configuration fields:
-mcpipy folder: this points to RaspberryJam Mod's folder in your Minecraft installation path. If you have installed everything in the default directories, it is already pointing to the right place.
-Script folder: this is your custom folder, type the address of your custom folder. For our pythontool folder in Desktop, if you are using Windows, it will look like this: Users\**yourUserName**\Desktop\pythontool.
-Everything should be ready now, clik on Done a few times to go back to the main screen, and start your world. Enjoy!
