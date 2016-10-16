@@ -43,7 +43,7 @@ Linux and Mac come with Python installed by default, so you don't need to do any
 
 ### Install RaspberryJam Mod
 
-1. Visit [RaspberryJam's website] (https://github.com/arpruss/raspberryjammod/releases/latest)
+1. Visit [RaspberryJam's website](https://github.com/arpruss/raspberryjammod/releases/latest)
 2. If you are using Windows, you can download and execute `RaspberryJamMod-Installer.exe`, it will install the mod, the needed Python library and Python itself for you!
 3. If you are using Mac/Linux or Windows but you don't want to use the installer, download `mods.zip` and `python-sripts.zip`, uncompress both and place the `mods` and `mcpipy` folders in your Minecraft installation folder. Default installation paths are:
     * Windows: `Users\**yourUserName**\AppData\Roaming\.minecraft`
