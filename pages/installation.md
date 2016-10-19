@@ -50,7 +50,7 @@ Linux and Mac come with Python installed by default, so you don't need to do any
     * Mac OS: `~/Library/Application Support/minecraft`
     * Linux: `/Home/**yourUserName**/.minecraft/`
 
-In the end it should look like: **minecraft**/mods/**version**/RaspBerryJamMod.jar, replacing **version** by the Minecraft version, for example 1.10.2.
+In the end it should look like: `minecraft/mods/**version**/RaspberryJamMod.jar`, replacing `**version**` by the Minecraft version, for example 1.10.2.
 
 ### Install PythonTool!
 
