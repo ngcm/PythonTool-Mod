@@ -11929,9 +11929,9 @@ Find the <code>pauseOnLostFocus</code> value and replace <code>true</code> by <c
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So my player is standing at position</p>
 <ul>
-<li>x = -21.521329516654646</li>
-<li>y = 6.0</li>
-<li>z = 41.48384559579614</li>
+<li>x = -96.39792077711516</li>
+<li>y = 7.0</li>
+<li>z = -63.126090997433664</li>
 </ul>
 <p>Your coordinates will vary, as your player is standing in a different place in a completely different world!</p>
 
