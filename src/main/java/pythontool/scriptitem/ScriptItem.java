@@ -131,10 +131,10 @@ public class ScriptItem extends Item {
 			}
 		}
 
-		// Decrease stack size
-		if (!player.capabilities.isCreativeMode) {
-			stack.stackSize--;
-		}
+		// Decrease stack size, both in creative or survival
+//		if (!player.capabilities.isCreativeMode) {
+		stack.stackSize--;
+//		}
 		return new ActionResult(EnumActionResult.PASS, stack);
 	}
 

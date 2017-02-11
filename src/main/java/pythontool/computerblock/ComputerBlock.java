@@ -201,10 +201,10 @@ public class ComputerBlock extends Block
 			}
 			return false;
 		}
-		// Move the scripts from the personal directory to $minecraft/mcpipy/pythontool
+		// Move everything from the personal directory to $minecraft/mcpipy/pythontool
 		try {
-			FileFilter fileFilter = new WildcardFileFilter("*.py");
-			FileUtils.copyDirectory(scriptFile, mcpipyPythonToolFile, fileFilter);
+//			FileFilter fileFilter = new WildcardFileFilter("*.py");
+			FileUtils.copyDirectory(scriptFile, mcpipyPythonToolFile);
 		} catch (IOException e) {
 			if (world.isRemote) {
 				player.addChatMessage(new TextComponentString(TextFormatting.RED +
