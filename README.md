@@ -1,4 +1,5 @@
 [![Circle CI](https://circleci.com/gh/ngcm/PythonTool-Mod.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/ngcm/PythonTool-Mod/tree/master)
+[![DOI](https://zenodo.org/badge/65482833.svg)](https://zenodo.org/badge/latestdoi/65482833)
 
 # :snake: PythonTool-Mod for Minecraft
 #### Interactively alter your Minecraft world in real time, using Python.
