@@ -1,6 +1,6 @@
 # Site settings
 title: PythonTool Mod
-email: a.perez-diaz@soton.ac.uk
+email: pythontool@alvarop.me
 description: > # this means to ignore newlines until "baseurl:"
   PythonTool Mod for Minecraft. Interactively alter your Minecraft world in real time, using Python.
 baseurl: "/PythonTool-Mod/" # the subpath of your site, e.g. /blog/
