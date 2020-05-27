@@ -219,7 +219,7 @@ public class ComputerBlock extends Block
 	// Called when the block is right clicked
 	// In this block it is used to open the blocks gui when right clicked by a player
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {		
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
 		// Obtain the tile entity associated with the block using its position
 		// then cast to our custom TileEntityInventoryBasic
 		TileEntity te = worldIn.getTileEntity(pos);
@@ -279,28 +279,31 @@ public class ComputerBlock extends Block
 	// This is where you can do something when the block is broken. In this case drop the inventory's contents
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
+		
+		super.breakBlock(worldIn, pos, state);
+		
 		// If not in creative mode: survival, etc. break and drop the block itself
-		if (!Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
-			// Make the block drop itself 
-			ItemStack itemTemp = new ItemStack(pythontool.computerblock.StartupCommon.computerBlock, 1);
-			EntityItem item = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
-					itemTemp);
-			// Give it a random drop speed
-			float multiplier = 0.1f;
-			float motionX = worldIn.rand.nextFloat() - 0.5f;
-			float motionY = worldIn.rand.nextFloat() - 0.5f;
-			float motionZ = worldIn.rand.nextFloat() - 0.5f;
-			item.motionX = motionX * multiplier;
-			item.motionY = motionY * multiplier;
-			item.motionZ = motionZ * multiplier;
-			// Spawn the item in the world
-			worldIn.spawnEntity(item);
-			// Super MUST be called last because it removes the tile entity
-			super.breakBlock(worldIn, pos, state);
-		} else {
-			// If in creative mode, don't drop the block
-			super.breakBlock(worldIn, pos, state);
-		}
+//		if (!Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
+//			// Make the block drop itself 
+//			ItemStack itemTemp = new ItemStack(pythontool.computerblock.StartupCommon.computerBlock, 1);
+//			EntityItem item = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+//					itemTemp);
+//			// Give it a random drop speed
+//			float multiplier = 0.1f;
+//			float motionX = worldIn.rand.nextFloat() - 0.5f;
+//			float motionY = worldIn.rand.nextFloat() - 0.5f;
+//			float motionZ = worldIn.rand.nextFloat() - 0.5f;
+//			item.motionX = motionX * multiplier;
+//			item.motionY = motionY * multiplier;
+//			item.motionZ = motionZ * multiplier;
+//			// Spawn the item in the world
+//			worldIn.spawnEntity(item);
+//			// Super MUST be called last because it removes the tile entity
+//			super.breakBlock(worldIn, pos, state);
+//		} else {
+//			// If in creative mode, don't drop the block
+//			super.breakBlock(worldIn, pos, state);
+//		}
 	}
 	
 	//---------------------------------------------------------

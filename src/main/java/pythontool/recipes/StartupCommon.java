@@ -5,10 +5,14 @@ import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.IFuelHandler;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.registries.IForgeRegistry;
+import pythontool.PythonTool;
 
 /**
  * ----------- PythonTool Mod -----------
@@ -47,7 +51,9 @@ public class StartupCommon
 	public static void initCommon()
 	{
 		// Register the ComputerBlock
-		GameRegistry.addRecipe(new ItemStack(pythontool.computerblock.StartupCommon.computerBlock), new Object[]{
+		GameRegistry.addShapedRecipe(new ResourceLocation(PythonTool.MODID, "ComputerBlockRecipe"),
+				null,
+				new ItemStack(pythontool.computerblock.StartupCommon.computerBlock), new Object[]{
 				"RRR",
 				"RGR",
 				"RRR",

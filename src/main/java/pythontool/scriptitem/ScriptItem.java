@@ -2,9 +2,12 @@ package pythontool.scriptitem;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import org.apache.commons.lang3.SystemUtils;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -143,7 +146,7 @@ public class ScriptItem extends Item {
 	@SideOnly(Side.CLIENT)
 	@SuppressWarnings("unchecked")
 	@Override
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		NBTTagCompound nbtTagCompound = stack.getTagCompound();
 		if (nbtTagCompound != null && nbtTagCompound.hasKey("scriptName")) {
 			tooltip.add("Loaded script: " + nbtTagCompound.getString("scriptName"));

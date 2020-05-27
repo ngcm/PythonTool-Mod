@@ -1,10 +1,22 @@
 package pythontool.computerblock;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import pythontool.GuiHandlerRegistry;
 import pythontool.PythonTool;
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
 /**
  * ----------- PythonTool Mod -----------
@@ -29,23 +41,16 @@ import pythontool.PythonTool;
  *  See MinecraftByExample class for more information
  */
 
+@ObjectHolder(PythonTool.MODID)
 public class StartupCommon
 {
-	public static ComputerBlock computerBlock;  // this holds the unique instance of your block
-	public static ItemBlock itemComputerBlock; // and the corresponding item form that block
+	public static final ComputerBlock computerBlock = null;  // this holds the unique instance of your block
+	
+	@ObjectHolder("computerBlock")
+	public static final ItemBlock item_block_computerBlock = null;
 	
 	public static void preInitCommon()
-	{
-		// Create and register an instance of the Computer Block
-		computerBlock = (ComputerBlock)(new ComputerBlock().setRegistryName("computerBlock"));
-		computerBlock.setUnlocalizedName(computerBlock.getRegistryName().toString());
-		GameRegistry.register(computerBlock);
-		
-		// Same but for the associated item
-		itemComputerBlock = new ItemBlock(computerBlock);
-		itemComputerBlock.setRegistryName(computerBlock.getRegistryName());
-		GameRegistry.register(itemComputerBlock);
-		
+	{	
 		// Each of your tile entities needs to be registered with a name that is unique to your mod.
 		GameRegistry.registerTileEntity(TileEntityComputerBlock.class, "computerBlock_tile");
 
@@ -64,5 +69,31 @@ public class StartupCommon
 
 	public static void postInitCommon()
 	{
+	}
+	
+	@EventBusSubscriber(modid = PythonTool.MODID)
+	public static class RegistrationHandler {
+
+		@SubscribeEvent
+		public static void registerBlocks(RegistryEvent.Register<Block> event) {
+			event.getRegistry()
+					.register(new ComputerBlock().setRegistryName(PythonTool.MODID+":"+"computerBlock").setUnlocalizedName(PythonTool.MODID+":"+"computerBlock"));
+		}
+
+		@SubscribeEvent
+		public static void registerItems(RegistryEvent.Register<Item> event) {
+			event.getRegistry()
+					.register(new ItemBlock(computerBlock)
+							.setRegistryName(computerBlock.getRegistryName())
+							.setUnlocalizedName(computerBlock.getRegistryName().toString()));
+		}
+		
+		 @SubscribeEvent
+	     @SideOnly(Side.CLIENT)
+	     public static void onModelEvent(final ModelRegistryEvent event) {
+			 ModelLoader.setCustomModelResourceLocation(item_block_computerBlock, 0,
+		                new ModelResourceLocation(computerBlock.getRegistryName(), "inventory"));
+	     }
+
 	}
 }

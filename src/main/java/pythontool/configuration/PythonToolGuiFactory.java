@@ -40,21 +40,9 @@ public class PythonToolGuiFactory implements IModGuiFactory
 		// for the configuration gui
 	}
 
-	@Override
-	public Class<? extends GuiScreen> mainConfigGuiClass() 
-	{
-		return PythonToolConfigGui.class; //tells Forge which class represents our main GUI screen
-	}
-
 	//The following two functions are needed for implementation only, the config gui does not require them
 	@Override
 	public Set<RuntimeOptionCategoryElement> runtimeGuiCategories() 
-	{
-		return null;
-	}
-
-	@Override
-	public RuntimeOptionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element) 
 	{
 		return null;
 	}
