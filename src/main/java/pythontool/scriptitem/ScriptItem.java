@@ -126,7 +126,7 @@ public class ScriptItem extends Item {
 		if (!world.isRemote) {
 			if (player.isSneaking()) { // shift pressed. Run new parallel script
 				String scriptName = nbtTagCompound.getString("scriptName");
-				Minecraft.getMinecraft().player.getServer().getCommandManager().executeCommand(player,
+				world.getMinecraftServer().getCommandManager().executeCommand(player,
 						"/apy " + "pythontool" + separator + scriptName);
 			} else { // shift not pressed. Cancel previous scripts and run new script
 				String scriptName = nbtTagCompound.getString("scriptName");
