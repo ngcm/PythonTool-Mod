@@ -8,7 +8,7 @@
 
 ## [Official website](https://ngcm.github.io/PythonTool-Mod/): installation instructions, user guide, troubleshooting, etc.
 
-## [PythonTool](https://github.com/ngcm/PythonTool-Mod/branches/all) is available for Minecraft 1.8, 1.8.8, 1.8.9, 1.9, 1.9.4, 1.10 & 1.10.2. The code is organised using branches, one for each version.
+## [PythonTool](https://github.com/ngcm/PythonTool-Mod/branches/all) is available for Minecraft 1.8, 1.8.8, 1.8.9, 1.9, 1.9.4, 1.10, 1.10.2, 1.11.2 & 1.12.2. The code is organised using branches, one for each version.
 
 ---
 
