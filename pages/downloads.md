@@ -16,3 +16,4 @@ permalink: downloads/
 ### Minecraft 1.10   | [Forge](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.10.html)   | [PythonTool Mod](https://github.com/ngcm/PythonTool-Mod/tree/master/mod_jars/1.10/pythontool-0.8.jar) |
 ### Minecraft 1.10.2 | [Forge](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.10.2.html) | [PythonTool Mod](https://github.com/ngcm/PythonTool-Mod/tree/master/mod_jars/1.10.2/pythontool-0.8.jar) |
 ### Minecraft 1.11.2 | [Forge](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.11.2.html) | [PythonTool Mod](https://github.com/ngcm/PythonTool-Mod/tree/master/mod_jars/1.11.2/pythontool-0.8.jar) |
+### Minecraft 1.12.2 | [Forge](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html) | [PythonTool Mod](https://github.com/ngcm/PythonTool-Mod/tree/master/mod_jars/1.12.2/pythontool-0.8.jar) |
