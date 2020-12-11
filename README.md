@@ -3,7 +3,7 @@
 # :snake: PythonTool-Mod for Minecraft
 #### Interactively alter your Minecraft world in real time, using Python.
 
-![PythonTool-logo-large](http://www.southampton.ac.uk/~apd1g15/media/pythontool_logo_large.jpg)
+![PythonTool-logo-large](https://ngcm.github.io/PythonTool-Mod/images/pythontool_logo.jpg)
 
 ### [Official website](https://ngcm.github.io/PythonTool-Mod/): installation instructions, user guide, troubleshooting, etc.
 
